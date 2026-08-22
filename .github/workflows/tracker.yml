@@ -1,0 +1,31 @@
+name: Flight Tracker
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Runs automatically every 5 minutes
+  workflow_dispatch:       # Allows you to trigger it manually
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          
+      - name: Install dependencies
+        run: pip install requests
+        
+      - name: Run Tracker
+        run: python special_liveries_tracker.py
+        
+      - name: Commit and push memory
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add tracked_flights.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update memory" && git push)
