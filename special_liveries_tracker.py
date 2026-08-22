@@ -1,0 +1,188 @@
+#!/usr/bin/env python3
+"""
+Global + Geofence Special Aircraft Tracker (GitHub Actions Version)
+Runs ONCE per execution and saves its memory to a JSON file so GitHub can remember it between runs.
+"""
+
+import time
+import requests
+import logging
+import os
+import json
+
+# ==============================================================================
+# CONFIGURATION
+# ==============================================================================
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8758934096:AAEMPHenyHmGydhG0G993GkpR4YlTAMsGg8")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "2114651613")
+STATE_FILE = "tracked_flights.json"
+
+TLV_LAT = 32.0114
+TLV_LON = 34.8867
+TLV_RADIUS_NM = 350
+
+SPECIAL_REGS = [
+    "9H-EUM", "D-AEWM", "D-AEWP", "D-AIUA", "D-AIZH", "D-AIZM", "D-AIZN",
+    "EI-DSY", "EI-EIB", "EI-EIE", "HB-IJN", "HB-IJO", "OE-LBO", "OE-LBY",
+    "OE-LBZ", "HB-JLT", "D-ABYN", "D-AIMH", "D-AIFA", "D-AIXL", "D-ABPU",
+    "D-AISZ", "D-AIBH", "D-AIBI", "D-AIBJ", "D-AILU", "EI-IMX", "OO-SSY",
+    "OO-SNB", "OO-SNJ", "OO-SNM", "OO-SNO", "OO-SNP", "OO-SNQ", "D-AIND",
+    "D-AING", "D-AINY", "EI-HOI", "OO-SBA", "OO-SBB", "D-AIRY", "D-AEEA",
+    "D-AIEM", "D-AIEP", "D-AIEQ", "EI-IFD", "HB-IFA", "D-ABYT", "OE-LPF",
+    "D-ALFI", "4X-EDF", "4X-EDM", "4X-ISR", "D-AICH", "D-ASGE", "D-AICS",
+    "9H-WMR", "9H-WNM", "G-XLRA", "A6-EJB", "A6-AEN", "A6-BLV", "A6-BND",
+    "A6-BMA", "A6-BMH", "PH-YHD", "PH-HSI", "PH-BXO", "PH-BVA", "PH-BKA",
+    "PH-NXM", "PH-EZX", "ET-AYN", "ET-BAW", "ET-AQN", "ET-ATG", "ET-BCC",
+    "ET-AXS", "SX-DVQ", "SX-DVR", "SP-LVD", "SP-LVF", "SP-LVG", "SP-LVK",
+    "SP-LVL", "SP-LSC", "YL-ABN", "YL-ABX", "YL-CSJ", "YL-CSK", "YL-CSL",
+    "4X-EDN", "ER-00004", "B-1540", "B-1499", "B-1343", "N91007", "N61101",
+    "N24988", "N794UA", "N78017", "N77022", "N76021", "N218UA", "G-EUYP",
+    "G-EUYR", "G-EUYS", "G-TTNA", "G-YMME", "G-YMMF", "G-YMMR", "G-YMMT",
+    "G-YMMU", "G-STBN", "C-FSBV", "C-FIVM", "N411DX", "N521DN", "N522DZ",
+    "N527DN", "N531DN", "EC-NFZ", "EC-NJY"
+]
+
+TARGET_TYPE_PREFIXES = ('B74', 'A38', 'A34', 'A30', 'B75', 'B76', 'C17', 'C5', 'A124', 'T204', 'A310')
+GLOBAL_FETCH_TYPES = "B741,B742,B743,B744,B748,B74S,B74R,A388,A342,A343,A345,A346,A306,A30B,B752,B753,B762,B763,B764,C17,C5,A124,T204,A310,A319"
+IRREGULAR_COMBOS = [("DLH", "A319")]
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+
+tracked_flights = {}
+
+def load_state():
+    if os.path.exists(STATE_FILE):
+        try:
+            with open(STATE_FILE, "r") as f: return json.load(f)
+        except Exception: pass
+    return {}
+
+def save_state(state):
+    with open(STATE_FILE, "w") as f:
+        json.dump(state, f, indent=4)
+
+def send_telegram_alert(message: str):
+    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+    payload = {"chat_id": TELEGRAM_CHAT_ID, "text": message, "parse_mode": "Markdown", "disable_web_page_preview": True}
+    try: requests.post(url, json=payload, timeout=10)
+    except: pass
+
+def is_target_aircraft(reg: str, ac_type: str, callsign: str) -> bool:
+    if reg and reg in SPECIAL_REGS: return True
+    if ac_type and ac_type.startswith(TARGET_TYPE_PREFIXES): return True
+    if callsign and ac_type:
+        for prefix, actype in IRREGULAR_COMBOS:
+            if callsign.startswith(prefix) and ac_type.startswith(actype): return True
+    return False
+
+def get_flight_route(registration: str) -> str:
+    if not registration or registration == "N/A": return "Unknown Route"
+    try:
+        url = f"https://api.flightradar24.com/common/v1/flight/list.json?query={registration}&fetchBy=reg"
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36", "Accept": "application/json"}
+        res = requests.get(url, headers=headers, timeout=10)
+        if res.status_code == 200:
+            flights = res.json().get("result", {}).get("response", {}).get("data", [])
+            for f in flights:
+                dep_time = f.get("time", {}).get("real", {}).get("departure")
+                arr_time = f.get("time", {}).get("real", {}).get("arrival")
+                if dep_time is not None and arr_time is None:
+                    orig = f.get("airport", {}).get("origin", {}).get("code", {}).get("iata", "N/A") if f.get("airport", {}).get("origin") else "N/A"
+                    dest = f.get("airport", {}).get("destination", {}).get("code", {}).get("iata", "N/A") if f.get("airport", {}).get("destination") else "N/A"
+                    flight_no = f.get("identification", {}).get("number", {}).get("default", "N/A")
+                    if flight_no != "N/A": return f"{orig} ➡️ {dest} ({flight_no})"
+                    return f"{orig} ➡️ {dest}"
+    except: pass
+    return "Unknown Route"
+
+def fetch_adsb_data(url: str):
+    try:
+        res = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
+        if res.status_code == 200: return res.json().get("ac", [])
+    except: pass
+    return []
+
+def poll_sky():
+    global tracked_flights
+    geofence_ac = fetch_adsb_data(f"https://api.adsb.lol/v2/lat/{TLV_LAT}/lon/{TLV_LON}/dist/{TLV_RADIUS_NM}")
+    geofence_hexes = {ac.get("hex", "").lower() for ac in geofence_ac if ac.get("hex")}
+    type_ac = fetch_adsb_data(f"https://api.adsb.lol/v2/type/{GLOBAL_FETCH_TYPES}")
+    reg_ac = fetch_adsb_data(f"https://api.adsb.lol/v2/reg/{','.join(SPECIAL_REGS)}")
+    
+    all_aircraft = {}
+    for ac in geofence_ac + type_ac + reg_ac:
+        hex_code = ac.get("hex", "").lower()
+        if hex_code: all_aircraft[hex_code] = ac
+
+    currently_airborne_targets = set()
+
+    for hex_code, ac in all_aircraft.items():
+        reg = ac.get("r", "").upper()
+        ac_type = ac.get("t", "").upper()
+        callsign = ac.get("flight", "").strip().upper()
+        
+        if not is_target_aircraft(reg, ac_type, callsign): continue
+            
+        alt = ac.get("alt_baro", "Unknown")
+        gs = ac.get("gs", "Unknown")
+
+        is_airborne = False
+        try:
+            if isinstance(alt, (int, float)) and alt > 0: is_airborne = True
+            elif isinstance(alt, str) and alt.isdigit() and int(alt) > 0: is_airborne = True
+        except: pass
+
+        if not is_airborne: continue
+
+        currently_airborne_targets.add(hex_code)
+        in_geofence = hex_code in geofence_hexes
+        
+        if hex_code not in tracked_flights:
+            tracked_flights[hex_code] = {"callsign": callsign, "route_checked": False, "alerted": False, "route": "Unknown Route"}
+        
+        state = tracked_flights[hex_code]
+        
+        if not state.get("route_checked"):
+            state["route"] = get_flight_route(reg)
+            state["route_checked"] = True
+            logging.info(f"Route resolved for {reg or hex_code}: {state['route']}")
+            
+        route = state["route"]
+        route_to_tlv = "TLV" in route or "LLBG" in route
+        should_alert = route_to_tlv or in_geofence
+
+        if should_alert and not state.get("alerted"):
+            logging.info(f"ALERT TRIGGERED: {reg or hex_code}")
+            trigger_reason = "🌐 *Global Early Warning!*" if not in_geofence else "📍 *Entered TLV Airspace!*"
+            msg_reg = reg if reg else "Unknown"
+            msg_type = ac_type if ac_type else "Unknown"
+            
+            alert_msg = (
+                f"🚨 *Target Aircraft Detected!*\n"
+                f"{trigger_reason}\n\n"
+                f"*Registration:* {msg_reg} ({msg_type})\n"
+                f"*Callsign:* {callsign}\n"
+                f"*Route:* {route}\n"
+                f"*Altitude:* {alt} ft\n"
+                f"*Ground Speed:* {gs} kts\n\n"
+                f"[Track on ADSB Exchange](https://globe.adsbexchange.com/?icao={hex_code})"
+            )
+            send_telegram_alert(alert_msg)
+            state["alerted"] = True
+
+    # Clear aircraft that landed or went offline
+    for hex_code in list(tracked_flights.keys()):
+        if hex_code not in currently_airborne_targets:
+            logging.info(f"Aircraft {hex_code} landed or went offline. Resetting memory for next flight.")
+            del tracked_flights[hex_code]
+
+def main():
+    global tracked_flights
+    logging.info("Starting GitHub Actions Tracker Run...")
+    tracked_flights = load_state()
+    poll_sky()
+    save_state(tracked_flights)
+    logging.info("Run complete. State saved.")
+
+if __name__ == "__main__":
+    main()
