@@ -172,12 +172,16 @@ def poll_sky():
             state["route_checked"] = True
             logging.info(f"Route resolved for {reg or hex_code}: {state['route']}")
             
+        # Check if the aircraft is military or a special livery
+        military_prefixes = ('C17', 'C5', 'A124', 'K35R', 'A400', 'IL76', 'IL96', 'A3ST', 'A337')
+        is_military_or_special = (reg in SPECIAL_REGS) or ac_type.startswith(military_prefixes)
+
         route = state["route"]
         route_to_tlv = "TLV" in route or "LLBG" in route
         is_hidden_route = (route == "Unknown Route")
         
-        # Only alert if it's heading to TLV, or if it's in the geofence AND hiding its route!
-        should_alert = route_to_tlv or (in_geofence and is_hidden_route)
+        # Alert if heading to TLV, OR if it's a secretive military/special plane in the geofence!
+        should_alert = route_to_tlv or (in_geofence and is_hidden_route and is_military_or_special)
 
         if should_alert and not state.get("alerted"):
             logging.info(f"ALERT TRIGGERED: {reg or hex_code}")
