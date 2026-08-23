@@ -179,4 +179,83 @@ def poll_sky():
         currently_airborne_targets.add(hex_code)
         
         if hex_code not in tracked_flights:
-            tracked_flights[hex_code] = {"callsign": callsign, "route_checked": False, "alerted": False, "route": "Unknown Route",
+            tracked_flights[hex_code] = {
+                "callsign": callsign, 
+                "route_checked": False, 
+                "alerted": False, 
+                "route": "Unknown Route", 
+                "emergency_alerted": False
+            }
+        
+        state = tracked_flights[hex_code]
+        dist_str, eta_str = calculate_distance_eta(lat, lon, gs)
+        
+        # Check Target Alert
+        if is_target:
+            if not state.get("route_checked"):
+                state["route"] = get_flight_route(reg)
+                state["route_checked"] = True
+                
+            route = state["route"]
+            route_to_tlv = "TLV" in route or "LLBG" in route
+            is_hidden_route = (route == "Unknown Route")
+            
+            military_prefixes = ('C17', 'C5', 'A124', 'K35R', 'A400', 'IL76', 'IL96', 'A3ST', 'A337')
+            is_military_or_special = (reg in SPECIAL_REGS) or ac_type.startswith(military_prefixes)
+            
+            should_alert = route_to_tlv or (in_geofence and is_hidden_route and is_military_or_special)
+
+            if should_alert and not state.get("alerted"):
+                trigger_reason = "🌐 *Target Route matches TLV!*" if route_to_tlv else "📍 *Unknown Target in TLV Airspace!*"
+                msg_reg = reg if reg else "Unknown"
+                msg_type = ac_type if ac_type else "Unknown"
+                
+                alert_msg = (
+                    f"🚨 *Target Aircraft Detected!*\n"
+                    f"{trigger_reason}\n\n"
+                    f"*Registration:* {msg_reg} ({msg_type})\n"
+                    f"*Callsign:* {callsign}\n"
+                    f"*Route:* {route}\n"
+                    f"*Distance to TLV:* {dist_str}\n"
+                    f"*ETA:* {eta_str}\n"
+                    f"*Altitude:* {alt} ft\n"
+                    f"*Speed:* {gs} kts\n\n"
+                    f"[Track on ADSB Exchange](https://globe.adsbexchange.com/?icao={hex_code})"
+                )
+                send_telegram_alert(alert_msg)
+                state["alerted"] = True
+
+        # Check Emergency Alert
+        if in_geofence and is_emergency and not state.get("emergency_alerted", False):
+            msg_reg = reg if reg else "Unknown"
+            msg_type = ac_type if ac_type else "Unknown"
+            squawk_type = "GENERAL EMERGENCY" if squawk == "7700" else "RADIO FAILURE" if squawk == "7600" else "HIJACKING"
+            
+            alert_msg = (
+                f"⚠️ *EMERGENCY SQUAWK NEAR TLV!* ⚠️\n"
+                f"Aircraft broadcasting {squawk} ({squawk_type})\n\n"
+                f"*Registration:* {msg_reg} ({msg_type})\n"
+                f"*Callsign:* {callsign}\n"
+                f"*Distance to TLV:* {dist_str}\n"
+                f"*ETA:* {eta_str}\n"
+                f"*Altitude:* {alt} ft\n"
+                f"*Speed:* {gs} kts\n\n"
+                f"[Track on ADSB Exchange](https://globe.adsbexchange.com/?icao={hex_code})"
+            )
+            send_telegram_alert(alert_msg)
+            state["emergency_alerted"] = True
+
+    for hex_code in list(tracked_flights.keys()):
+        if hex_code not in currently_airborne_targets:
+            del tracked_flights[hex_code]
+
+def main():
+    global tracked_flights
+    logging.info("Starting GitHub Actions Tracker Run...")
+    tracked_flights = load_state()
+    poll_sky()
+    save_state(tracked_flights)
+    logging.info("Run complete. State saved.")
+
+if __name__ == "__main__":
+    main()
