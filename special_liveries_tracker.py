@@ -1,22 +1,14 @@
-#!/usr/bin/env python3
 """
 Global + Geofence Special Aircraft Tracker (GitHub Actions Version)
-Runs ONCE per execution and saves its memory to a JSON file so GitHub can remember it between runs.
 """
-
 import time
 import requests
 import logging
 import os
 import json
-
-# ==============================================================================
-# CONFIGURATION
-# ==============================================================================
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8758934096:AAEMPHenyHmGydhG0G993GkpR4YlTAMsGg8")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "2114651613")
 STATE_FILE = "tracked_flights.json"
-
 TLV_LAT = 32.0114
 TLV_LON = 34.8867
 TLV_RADIUS_NM = 350
@@ -123,26 +115,21 @@ IRREGULAR_COMBOS = [
 ]
 ]
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
-
 tracked_flights = {}
-
 def load_state():
     if os.path.exists(STATE_FILE):
         try:
             with open(STATE_FILE, "r") as f: return json.load(f)
         except Exception: pass
     return {}
-
 def save_state(state):
     with open(STATE_FILE, "w") as f:
         json.dump(state, f, indent=4)
-
 def send_telegram_alert(message: str):
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
     payload = {"chat_id": TELEGRAM_CHAT_ID, "text": message, "parse_mode": "Markdown", "disable_web_page_preview": True}
     try: requests.post(url, json=payload, timeout=10)
     except: pass
-
 def is_target_aircraft(reg: str, ac_type: str, callsign: str) -> bool:
     if reg and reg in SPECIAL_REGS: return True
     if ac_type and ac_type.startswith(TARGET_TYPE_PREFIXES): return True
@@ -150,7 +137,6 @@ def is_target_aircraft(reg: str, ac_type: str, callsign: str) -> bool:
         for prefix, actype in IRREGULAR_COMBOS:
             if callsign.startswith(prefix) and ac_type.startswith(actype): return True
     return False
-
 def get_flight_route(registration: str) -> str:
     if not registration or registration == "N/A": return "Unknown Route"
     try:
@@ -170,28 +156,24 @@ def get_flight_route(registration: str) -> str:
                     return f"{orig} ➡️ {dest}"
     except: pass
     return "Unknown Route"
-
 def fetch_adsb_data(url: str):
     try:
         res = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
         if res.status_code == 200: return res.json().get("ac", [])
     except: pass
     return []
-
 def poll_sky():
     global tracked_flights
     geofence_ac = fetch_adsb_data(f"https://api.adsb.lol/v2/lat/{TLV_LAT}/lon/{TLV_LON}/dist/{TLV_RADIUS_NM}")
     geofence_hexes = {ac.get("hex", "").lower() for ac in geofence_ac if ac.get("hex")}
     type_ac = fetch_adsb_data(f"https://api.adsb.lol/v2/type/{GLOBAL_FETCH_TYPES}")
-    reg_ac = fetch_adsb_data(f"https://api.adsb.lol/v2/reg/{','.join(SPECIAL_REGS)}")
+    reg_ac = fetch_adsb_data(f"https://api.adsb.lol/v2/reg/{','.join(SPECIAL_RE.GS)}") if SPECIAL_REGS else []
     
     all_aircraft = {}
     for ac in geofence_ac + type_ac + reg_ac:
         hex_code = ac.get("hex", "").lower()
         if hex_code: all_aircraft[hex_code] = ac
-
     currently_airborne_targets = set()
-
     for hex_code, ac in all_aircraft.items():
         reg = ac.get("r", "").upper()
         ac_type = ac.get("t", "").upper()
@@ -201,15 +183,13 @@ def poll_sky():
             
         alt = ac.get("alt_baro", "Unknown")
         gs = ac.get("gs", "Unknown")
-
         is_airborne = False
         try:
             if isinstance(alt, (int, float)) and alt > 0: is_airborne = True
             elif isinstance(alt, str) and alt.isdigit() and int(alt) > 0: is_airborne = True
         except: pass
-
         if not is_airborne: continue
-
+        
         currently_airborne_targets.add(hex_code)
         in_geofence = hex_code in geofence_hexes
         
@@ -223,7 +203,7 @@ def poll_sky():
             state["route_checked"] = True
             logging.info(f"Route resolved for {reg or hex_code}: {state['route']}")
             
-               route = state["route"]
+        route = state["route"]
         route_to_tlv = "TLV" in route or "LLBG" in route
         is_hidden_route = (route == "Unknown Route")
         
@@ -247,13 +227,11 @@ def poll_sky():
             )
             send_telegram_alert(alert_msg)
             state["alerted"] = True
-
-    # Clear aircraft that landed or went offline
+    # Clear aircraft that landed/went offline
     for hex_code in list(tracked_flights.keys()):
         if hex_code not in currently_airborne_targets:
             logging.info(f"Aircraft {hex_code} landed or went offline. Resetting memory for next flight.")
             del tracked_flights[hex_code]
-
 def main():
     global tracked_flights
     logging.info("Starting GitHub Actions Tracker Run...")
@@ -261,6 +239,7 @@ def main():
     poll_sky()
     save_state(tracked_flights)
     logging.info("Run complete. State saved.")
-
+if __name__ == "__main__":
+    main()
 if __name__ == "__main__":
     main()
