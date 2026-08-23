@@ -13,9 +13,10 @@ TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8758934096:AAEMPHenyHmGydh
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "2114651613")
 STATE_FILE = "tracked_flights.json"
 
+# 440 Nautical Mile Geofence (Provides ~1.5 hours of early warning for small jets)
 TLV_LAT = 32.0114
 TLV_LON = 34.8867
-TLV_RADIUS_NM = 350
+TLV_RADIUS_NM = 440
 
 SPECIAL_REGS = [
     "9H-EUM", "D-AEWM", "D-AEWP", "D-AIUA", "D-AIZH", "D-AIZM", "D-AIZN",
@@ -38,7 +39,7 @@ SPECIAL_REGS = [
     "N527DN", "N531DN", "EC-NFZ", "EC-NJY"
 ]
 
-# If an aircraft callsign starts with any of these, it will be tracked!
+# Track EVERY flight from these airlines (Alerts if heading to TLV)
 TARGET_AIRLINES = [
     "FJI", "HFA", "AFL", "CCM", "AXY", "AAF", "DJT", "QFA", "ANZ", "NBT", 
     "UBT", "IGO", "ANA", "GRL", "ARG", "AMX", "SIA", "THA", "JAL", "HVN", 
@@ -90,7 +91,7 @@ def is_target_aircraft(reg: str, ac_type: str, callsign: str) -> bool:
     if reg and reg in SPECIAL_REGS: return True
     if ac_type and ac_type.startswith(TARGET_TYPE_PREFIXES): return True
     
-    # Check if the callsign belongs to our target airlines list
+    # Target Airlines check
     if callsign and callsign[:3] in TARGET_AIRLINES: return True
         
     if callsign and ac_type:
