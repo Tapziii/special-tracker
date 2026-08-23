@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Global + Geofence Special Aircraft Tracker (GitHub Actions Version)
-Now with Live ETA Calculation & Emergency Squawk Monitoring!
+Now with Live ETA Calculation, Emergency Squawk Monitoring, & 777-300ERSF Tracking!
 """
 
 import time
@@ -20,6 +20,7 @@ TLV_LON = 34.8867
 TLV_RADIUS_NM = 440
 
 SPECIAL_REGS = [
+    # Original Special Liveries
     "9H-EUM", "D-AEWM", "D-AEWP", "D-AIUA", "D-AIZH", "D-AIZM", "D-AIZN",
     "EI-DSY", "EI-EIB", "EI-EIE", "HB-IJN", "HB-IJO", "OE-LBO", "OE-LBY",
     "OE-LBZ", "HB-JLT", "D-ABYN", "D-AIMH", "D-AIFA", "D-AIXL", "D-ABPU",
@@ -37,7 +38,15 @@ SPECIAL_REGS = [
     "N24988", "N794UA", "N78017", "N77022", "N76021", "N218UA", "G-EUYP",
     "G-EUYR", "G-EUYS", "G-TTNA", "G-YMME", "G-YMMF", "G-YMMR", "G-YMMT",
     "G-YMMU", "G-STBN", "C-FSBV", "C-FIVM", "N411DX", "N521DN", "N522DZ",
-    "N527DN", "N531DN", "EC-NFZ", "EC-NJY"
+    "N527DN", "N531DN", "EC-NFZ", "EC-NJY",
+    
+    # 777-300ERSF Registrations
+    "9H-CAZ", "9H-CAY", "N5401T", "9H-GLG", "9H-JJB", "N779CK", "N771CK",
+    "N770CK", "N778CK", "A6-EBK", "N162JL",
+    
+    # Other Non-777 Special Registrations
+    "4X-CVD", "4X-CVE", "4X-CVJ", "4X-WIA", "4X-WIR", "4X-WIS", "4X-CVG",
+    "4X-CVI", "4X-CVH", "N216GA", "4X-AOO"
 ]
 
 TARGET_AIRLINES = [
@@ -47,8 +56,9 @@ TARGET_AIRLINES = [
     "TOM", "TFL", "MBU", "EXS", "HFY", "HFM", "PAL", "AIB", "VSV"
 ]
 
-TARGET_TYPE_PREFIXES = ('B74', 'A38', 'A34', 'A30', 'B75', 'B76', 'B77', 'C17', 'C5', 'A124', 'T204', 'A310', 'K35R', 'A400', 'E29', 'IL76', 'IL96', 'A3ST', 'A337')
-GLOBAL_FETCH_TYPES = "B741,B742,B743,B744,B748,B74S,B74R,A388,A342,A343,A345,A346,A306,A30B,B752,B753,B762,B763,B764,B772,B77W,B778,B779,B788,B789,B78X,C17,C5,A124,T204,T214,A310,A319,A321,A332,A333,A339,A359,A35K,K35R,A400,E290,E295,IL76,IL96,MD11,A3ST,A337"
+# Changed B77 to B77L, B778, B779 to completely block normal passenger 777 spam!
+TARGET_TYPE_PREFIXES = ('B74', 'A38', 'A34', 'A30', 'B75', 'B76', 'B77L', 'B778', 'B779', 'C17', 'C5', 'A124', 'T204', 'A310', 'K35R', 'A400', 'E29', 'IL76', 'IL96', 'A3ST', 'A337')
+GLOBAL_FETCH_TYPES = "B741,B742,B743,B744,B748,B74S,B74R,A388,A342,A343,A345,A346,A306,A30B,B752,B753,B762,B763,B764,B77L,B77W,B772,B778,B779,B788,B789,B78X,C17,C5,A124,T204,T214,A310,A319,A321,A332,A333,A339,A359,A35K,K35R,A400,E290,E295,IL76,IL96,MD11,A3ST,A337"
 
 IRREGULAR_COMBOS = [
     ("DLH", "A319"), ("DLH", "A333"), ("DLH", "A343"), ("DLH", "A346"), ("DLH", "A359"),
@@ -141,7 +151,14 @@ def poll_sky():
     geofence_ac = fetch_adsb_data(f"https://api.adsb.lol/v2/lat/{TLV_LAT}/lon/{TLV_LON}/dist/{TLV_RADIUS_NM}")
     geofence_hexes = {ac.get("hex", "").lower() for ac in geofence_ac if ac.get("hex")}
     type_ac = fetch_adsb_data(f"https://api.adsb.lol/v2/type/{GLOBAL_FETCH_TYPES}")
-    reg_ac = fetch_adsb_data(f"https://api.adsb.lol/v2/reg/{','.join(SPECIAL_REGS)}") if SPECIAL_REGS else []
+    
+    # Split SPECIAL_REGS into batches of 50 to ensure we don't hit URL length limits
+    reg_ac = []
+    batch_size = 50
+    for i in range(0, len(SPECIAL_REGS), batch_size):
+        batch = SPECIAL_REGS[i:i+batch_size]
+        batch_ac = fetch_adsb_data(f"https://api.adsb.lol/v2/reg/{','.join(batch)}")
+        if batch_ac: reg_ac.extend(batch_ac)
     
     all_aircraft = {}
     for ac in geofence_ac + type_ac + reg_ac:
