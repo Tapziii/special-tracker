@@ -36,7 +36,7 @@ SPECIAL_REGS = [
     "N24988", "N794UA", "N78017", "N77022", "N76021", "N218UA", "G-EUYP",
     "G-EUYR", "G-EUYS", "G-TTNA", "G-YMME", "G-YMMF", "G-YMMR", "G-YMMT",
     "G-YMMU", "G-STBN", "C-FSBV", "C-FIVM", "N411DX", "N521DN", "N522DZ",
-    "N527DN", "N531DN", "EC-NFZ", "EC-NJY"
+    "N527DN", "N531DN", "EC-NFZ", "EC-NJY", "N804MS"
 ]
 
 # Track EVERY flight from these airlines (Alerts if heading to TLV)
