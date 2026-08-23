@@ -223,13 +223,15 @@ def poll_sky():
             state["route_checked"] = True
             logging.info(f"Route resolved for {reg or hex_code}: {state['route']}")
             
-        route = state["route"]
+               route = state["route"]
         route_to_tlv = "TLV" in route or "LLBG" in route
-        should_alert = route_to_tlv or in_geofence
-
+        is_hidden_route = (route == "Unknown Route")
+        
+        # Only alert if it's heading to TLV, or if it's in the geofence AND hiding its route!
+        should_alert = route_to_tlv or (in_geofence and is_hidden_route)
         if should_alert and not state.get("alerted"):
             logging.info(f"ALERT TRIGGERED: {reg or hex_code}")
-            trigger_reason = "🌐 *Global Early Warning!*" if not in_geofence else "📍 *Entered TLV Airspace!*"
+            trigger_reason = "🌐 *Target Route matches TLV!*" if route_to_tlv else "📍 *Unknown Target in TLV Airspace!*"
             msg_reg = reg if reg else "Unknown"
             msg_type = ac_type if ac_type else "Unknown"
             
