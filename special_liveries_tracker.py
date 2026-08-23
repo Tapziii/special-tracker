@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 Global + Geofence Special Aircraft Tracker (GitHub Actions Version)
+Now with Live ETA Calculation & Emergency Squawk Monitoring!
 """
 
 import time
@@ -8,12 +9,12 @@ import requests
 import logging
 import os
 import json
+import math
 
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8758934096:AAEMPHenyHmGydhG0G993GkpR4YlTAMsGg8")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "2114651613")
 STATE_FILE = "tracked_flights.json"
 
-# 440 Nautical Mile Geofence (Provides ~1.5 hours of early warning for small jets)
 TLV_LAT = 32.0114
 TLV_LON = 34.8867
 TLV_RADIUS_NM = 440
@@ -36,10 +37,9 @@ SPECIAL_REGS = [
     "N24988", "N794UA", "N78017", "N77022", "N76021", "N218UA", "G-EUYP",
     "G-EUYR", "G-EUYS", "G-TTNA", "G-YMME", "G-YMMF", "G-YMMR", "G-YMMT",
     "G-YMMU", "G-STBN", "C-FSBV", "C-FIVM", "N411DX", "N521DN", "N522DZ",
-    "N527DN", "N531DN", "EC-NFZ", "EC-NJY", "N804MS"
+    "N527DN", "N531DN", "EC-NFZ", "EC-NJY"
 ]
 
-# Track EVERY flight from these airlines (Alerts if heading to TLV)
 TARGET_AIRLINES = [
     "FJI", "HFA", "AFL", "CCM", "AXY", "AAF", "DJT", "QFA", "ANZ", "NBT", 
     "UBT", "IGO", "ANA", "GRL", "ARG", "AMX", "SIA", "THA", "JAL", "HVN", 
@@ -90,14 +90,10 @@ def send_telegram_alert(message: str):
 def is_target_aircraft(reg: str, ac_type: str, callsign: str) -> bool:
     if reg and reg in SPECIAL_REGS: return True
     if ac_type and ac_type.startswith(TARGET_TYPE_PREFIXES): return True
-    
-    # Target Airlines check
     if callsign and callsign[:3] in TARGET_AIRLINES: return True
-        
     if callsign and ac_type:
         for prefix, actype in IRREGULAR_COMBOS:
             if callsign.startswith(prefix) and ac_type.startswith(actype): return True
-            
     return False
 
 def get_flight_route(registration: str) -> str:
@@ -119,6 +115,19 @@ def get_flight_route(registration: str) -> str:
                     return f"{orig} ➡️ {dest}"
     except: pass
     return "Unknown Route"
+
+def calculate_distance_eta(lat, lon, gs):
+    if not lat or not lon or not isinstance(gs, (int, float)) or gs <= 0:
+        return "Unknown", "Unknown"
+    
+    R = 3440.065 # Earth radius in NM
+    dlat = math.radians(TLV_LAT - lat)
+    dlon = math.radians(TLV_LON - lon)
+    a = math.sin(dlat / 2)**2 + math.cos(math.radians(lat)) * math.cos(math.radians(TLV_LAT)) * math.sin(dlon / 2)**2
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+    dist_nm = R * c
+    eta_mins = (dist_nm / gs) * 60
+    return f"{int(dist_nm)} NM", f"~{int(eta_mins)} mins"
 
 def fetch_adsb_data(url: str):
     try:
@@ -145,11 +154,19 @@ def poll_sky():
         reg = ac.get("r", "").upper()
         ac_type = ac.get("t", "").upper()
         callsign = ac.get("flight", "").strip().upper()
+        squawk = str(ac.get("squawk", ""))
         
-        if not is_target_aircraft(reg, ac_type, callsign): continue
+        in_geofence = hex_code in geofence_hexes
+        is_emergency = squawk in ["7700", "7600", "7500"]
+        is_target = is_target_aircraft(reg, ac_type, callsign)
+        
+        # Only process if it's a target OR if it's an emergency near TLV
+        if not is_target and not (in_geofence and is_emergency): continue
             
         alt = ac.get("alt_baro", "Unknown")
         gs = ac.get("gs", "Unknown")
+        lat = ac.get("lat")
+        lon = ac.get("lon")
 
         is_airborne = False
         try:
@@ -160,61 +177,6 @@ def poll_sky():
         if not is_airborne: continue
         
         currently_airborne_targets.add(hex_code)
-        in_geofence = hex_code in geofence_hexes
         
         if hex_code not in tracked_flights:
-            tracked_flights[hex_code] = {"callsign": callsign, "route_checked": False, "alerted": False, "route": "Unknown Route"}
-        
-        state = tracked_flights[hex_code]
-        
-        if not state.get("route_checked"):
-            state["route"] = get_flight_route(reg)
-            state["route_checked"] = True
-            logging.info(f"Route resolved for {reg or hex_code}: {state['route']}")
-            
-        # Check if the aircraft is military or a special livery
-        military_prefixes = ('C17', 'C5', 'A124', 'K35R', 'A400', 'IL76', 'IL96', 'A3ST', 'A337')
-        is_military_or_special = (reg in SPECIAL_REGS) or ac_type.startswith(military_prefixes)
-
-        route = state["route"]
-        route_to_tlv = "TLV" in route or "LLBG" in route
-        is_hidden_route = (route == "Unknown Route")
-        
-        # Alert if heading to TLV, OR if it's a secretive military/special plane in the geofence!
-        should_alert = route_to_tlv or (in_geofence and is_hidden_route and is_military_or_special)
-
-        if should_alert and not state.get("alerted"):
-            logging.info(f"ALERT TRIGGERED: {reg or hex_code}")
-            trigger_reason = "🌐 *Target Route matches TLV!*" if route_to_tlv else "📍 *Unknown Target in TLV Airspace!*"
-            msg_reg = reg if reg else "Unknown"
-            msg_type = ac_type if ac_type else "Unknown"
-            
-            alert_msg = (
-                f"🚨 *Target Aircraft Detected!*\n"
-                f"{trigger_reason}\n\n"
-                f"*Registration:* {msg_reg} ({msg_type})\n"
-                f"*Callsign:* {callsign}\n"
-                f"*Route:* {route}\n"
-                f"*Altitude:* {alt} ft\n"
-                f"*Ground Speed:* {gs} kts\n\n"
-                f"[Track on ADSB Exchange](https://globe.adsbexchange.com/?icao={hex_code})"
-            )
-            send_telegram_alert(alert_msg)
-            state["alerted"] = True
-
-    # Clear aircraft that landed/went offline
-    for hex_code in list(tracked_flights.keys()):
-        if hex_code not in currently_airborne_targets:
-            logging.info(f"Aircraft {hex_code} landed or went offline. Resetting memory for next flight.")
-            del tracked_flights[hex_code]
-
-def main():
-    global tracked_flights
-    logging.info("Starting GitHub Actions Tracker Run...")
-    tracked_flights = load_state()
-    poll_sky()
-    save_state(tracked_flights)
-    logging.info("Run complete. State saved.")
-
-if __name__ == "__main__":
-    main()
+            tracked_flights[hex_code] = {"callsign": callsign, "route_checked": False, "alerted": False, "route": "Unknown Route",
