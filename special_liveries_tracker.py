@@ -49,7 +49,9 @@ SPECIAL_REGS = [
     
     # Other Non-777 Special Registrations
     "4X-CVD", "4X-CVE", "4X-CVJ", "4X-WIA", "4X-WIR", "4X-WIS", "4X-CVG",
-    "4X-CVI", "4X-CVH", "N216GA", "4X-AOO", "M-YULI", "4X-BAL", "4X-BAK"
+    "4X-CVI", "4X-CVH", "N216GA", "4X-AOO", "M-YULI", "4X-BAL", "4X-BAK",
+    "4X-AFG", "4X-AFC", "4X-AFG", "4X-AFV", "4X-AFG", "4X-AFK", "4X-AFU",
+    "4X-AFJ", "4X-AFY", "4X-AFA", "4X-AFS", "4X-AFL", "4X-AFH"
 ]
 
 TARGET_AIRLINES = [
