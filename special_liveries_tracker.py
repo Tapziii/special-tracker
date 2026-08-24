@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Global + Geofence Special Aircraft Tracker (GitHub Actions Version)
-Now with Live ETA Calculation, Emergency Squawk Monitoring, & 777-300ERSF Tracking!
+Now with Stealth-Proof Hex Tracking & Military Heavy/Tanker Category Detection!
 """
 
 import time
@@ -18,6 +18,9 @@ STATE_FILE = "tracked_flights.json"
 TLV_LAT = 32.0114
 TLV_LON = 34.8867
 TLV_RADIUS_NM = 440
+
+# Stealth-Proof Hex Codes (Cannot be hidden by pilots)
+SPECIAL_HEXES = ["738a01"] # 4X-ISR (Wing of Zion)
 
 SPECIAL_REGS = [
     # Original Special Liveries
@@ -46,7 +49,7 @@ SPECIAL_REGS = [
     
     # Other Non-777 Special Registrations
     "4X-CVD", "4X-CVE", "4X-CVJ", "4X-WIA", "4X-WIR", "4X-WIS", "4X-CVG",
-    "4X-CVI", "4X-CVH", "N216GA", "4X-AOO"
+    "4X-CVI", "4X-CVH", "N216GA", "4X-AOO", "M-YULI"
 ]
 
 TARGET_AIRLINES = [
@@ -56,9 +59,8 @@ TARGET_AIRLINES = [
     "TOM", "TFL", "MBU", "EXS", "HFY", "HFM", "PAL", "AIB", "VSV"
 ]
 
-# Changed B77 to B77L, B778, B779 to completely block normal passenger 777 spam!
-TARGET_TYPE_PREFIXES = ('B74', 'A38', 'A34', 'A30', 'B75', 'B76', 'B77L', 'B778', 'B779', 'C17', 'C5', 'A124', 'T204', 'A310', 'K35R', 'A400', 'E29', 'IL76', 'IL96', 'A3ST', 'A337')
-GLOBAL_FETCH_TYPES = "B741,B742,B743,B744,B748,B74S,B74R,A388,A342,A343,A345,A346,A306,A30B,B752,B753,B762,B763,B764,B77L,B77W,B772,B778,B779,B788,B789,B78X,C17,C5,A124,T204,T214,A310,A319,A321,A332,A333,A339,A359,A35K,K35R,A400,E290,E295,IL76,IL96,MD11,A3ST,A337"
+TARGET_TYPE_PREFIXES = ('B74', 'A38', 'A34', 'A30', 'B75', 'B76', 'B77L', 'B778', 'B779', 'C17', 'C5', 'A124', 'T204', 'A310', 'K35R', 'C135', 'A400', 'E29', 'IL76', 'IL96', 'A3ST', 'A337', 'C130', 'C30J')
+GLOBAL_FETCH_TYPES = "B741,B742,B743,B744,B748,B74S,B74R,A388,A342,A343,A345,A346,A306,A30B,B752,B753,B762,B763,B764,B77L,B77W,B772,B778,B779,B788,B789,B78X,C17,C5,A124,T204,T214,A310,A319,A321,A332,A333,A339,A359,A35K,K35R,C135,A400,E290,E295,IL76,IL96,MD11,A3ST,A337,C130,C30J"
 
 IRREGULAR_COMBOS = [
     ("DLH", "A319"), ("DLH", "A333"), ("DLH", "A343"), ("DLH", "A346"), ("DLH", "A359"),
@@ -97,13 +99,15 @@ def send_telegram_alert(message: str):
     try: requests.post(url, json=payload, timeout=10)
     except: pass
 
-def is_target_aircraft(reg: str, ac_type: str, callsign: str) -> bool:
+def is_target_aircraft(hex_code: str, reg: str, ac_type: str, callsign: str, is_military: bool, category: str) -> bool:
+    if hex_code in SPECIAL_HEXES: return True
     if reg and reg in SPECIAL_REGS: return True
     if ac_type and ac_type.startswith(TARGET_TYPE_PREFIXES): return True
     if callsign and callsign[:3] in TARGET_AIRLINES: return True
     if callsign and ac_type:
         for prefix, actype in IRREGULAR_COMBOS:
             if callsign.startswith(prefix) and ac_type.startswith(actype): return True
+    if is_military and category in ["A3", "A4", "A5"]: return True
     return False
 
 def get_flight_route(registration: str) -> str:
@@ -152,7 +156,6 @@ def poll_sky():
     geofence_hexes = {ac.get("hex", "").lower() for ac in geofence_ac if ac.get("hex")}
     type_ac = fetch_adsb_data(f"https://api.adsb.lol/v2/type/{GLOBAL_FETCH_TYPES}")
     
-    # Split SPECIAL_REGS into batches of 50 to ensure we don't hit URL length limits
     reg_ac = []
     batch_size = 50
     for i in range(0, len(SPECIAL_REGS), batch_size):
@@ -172,12 +175,13 @@ def poll_sky():
         ac_type = ac.get("t", "").upper()
         callsign = ac.get("flight", "").strip().upper()
         squawk = str(ac.get("squawk", ""))
+        category = ac.get("category", "")
+        is_military = bool(ac.get("dbFlags", 0) & 1)
         
         in_geofence = hex_code in geofence_hexes
         is_emergency = squawk in ["7700", "7600", "7500"]
-        is_target = is_target_aircraft(reg, ac_type, callsign)
+        is_target = is_target_aircraft(hex_code, reg, ac_type, callsign, is_military, category)
         
-        # Only process if it's a target OR if it's an emergency near TLV
         if not is_target and not (in_geofence and is_emergency): continue
             
         alt = ac.get("alt_baro", "Unknown")
@@ -207,7 +211,6 @@ def poll_sky():
         state = tracked_flights[hex_code]
         dist_str, eta_str = calculate_distance_eta(lat, lon, gs)
         
-        # Check Target Alert
         if is_target:
             if not state.get("route_checked"):
                 state["route"] = get_flight_route(reg)
@@ -217,8 +220,9 @@ def poll_sky():
             route_to_tlv = "TLV" in route or "LLBG" in route
             is_hidden_route = (route == "Unknown Route")
             
-            military_prefixes = ('C17', 'C5', 'A124', 'K35R', 'A400', 'IL76', 'IL96', 'A3ST', 'A337')
-            is_military_or_special = (reg in SPECIAL_REGS) or ac_type.startswith(military_prefixes)
+            is_heavy_military = is_military and category in ["A3", "A4", "A5"]
+            military_prefixes = ('C17', 'C5', 'A124', 'K35R', 'C135', 'A400', 'IL76', 'IL96', 'A3ST', 'A337', 'C130', 'C30J')
+            is_military_or_special = (reg in SPECIAL_REGS) or (hex_code in SPECIAL_HEXES) or ac_type.startswith(military_prefixes) or is_heavy_military
             
             should_alert = route_to_tlv or (in_geofence and is_hidden_route and is_military_or_special)
 
@@ -242,7 +246,6 @@ def poll_sky():
                 send_telegram_alert(alert_msg)
                 state["alerted"] = True
 
-        # Check Emergency Alert
         if in_geofence and is_emergency and not state.get("emergency_alerted", False):
             msg_reg = reg if reg else "Unknown"
             msg_type = ac_type if ac_type else "Unknown"
