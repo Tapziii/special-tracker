@@ -6,13 +6,6 @@
         "route": "ANC \u27a1\ufe0f JFK (None)",
         "emergency_alerted": false
     },
-    "42441f": {
-        "callsign": "AZG1621",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "a997cc": {
         "callsign": "DAL791",
         "route_checked": true,
@@ -39,13 +32,6 @@
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "a988f0": {
-        "callsign": "DAL1521",
-        "route_checked": true,
-        "alerted": false,
-        "route": "SNA \u27a1\ufe0f ATL (DL1521)",
         "emergency_alerted": false
     },
     "ae03d4": {
@@ -118,50 +104,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "a8df06": {
-        "callsign": "DAL748",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "782144": {
         "callsign": "CSG2526",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "3965af": {
-        "callsign": "AFR24X",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "4bb14e": {
-        "callsign": "THY6627",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "34659a": {
-        "callsign": "IBE0304",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "a47ad2": {
-        "callsign": "UPS2924",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "a7e158": {
-        "callsign": "ATN3398",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -202,13 +146,6 @@
         "route": "SEA \u27a1\ufe0f ATL (DL554)",
         "emergency_alerted": false
     },
-    "c060c9": {
-        "callsign": "POE182",
-        "route_checked": true,
-        "alerted": false,
-        "route": "YVR \u27a1\ufe0f YHU (PD182)",
-        "emergency_alerted": false
-    },
     "a96c96": {
         "callsign": "DAL361",
         "route_checked": true,
@@ -218,13 +155,6 @@
     },
     "aab187": {
         "callsign": "UAL457",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "a8e2d6": {
-        "callsign": "DAL914",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -258,13 +188,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "345319": {
-        "callsign": "IBE0355",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "a4f5f0": {
         "callsign": "DAL939",
         "route_checked": true,
@@ -286,13 +209,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "a5ef0e": {
-        "callsign": "UAL1283",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "ab9e12": {
         "callsign": "FDX5388",
         "route_checked": true,
@@ -309,20 +225,6 @@
     },
     "a50c4b": {
         "callsign": "UPS2956",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "868034": {
-        "callsign": "JAL9",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "3c4a03": {
-        "callsign": "DLH445",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -356,22 +258,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "3c4591": {
-        "callsign": "BOX458",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "896682": {
         "callsign": "UAE98V",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "50801f": {
-        "callsign": "",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -384,29 +272,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "a03f48": {
-        "callsign": "FDX6917",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "a4972c": {
-        "callsign": "UPS269",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "ae04dc": {
         "callsign": "",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "44cdca": {
-        "callsign": "BEL7BK",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -421,13 +288,6 @@
     },
     "780a28": {
         "callsign": "CPA2084",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "71c285": {
-        "callsign": "KAL240",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -475,13 +335,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "781f4c": {
-        "callsign": "CSG2683",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "4b15db": {
         "callsign": "EDW2M",
         "route_checked": true,
@@ -498,13 +351,6 @@
     },
     "a9ec06": {
         "callsign": "UAL501",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "aa3ae4": {
-        "callsign": "UAL347",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -580,13 +426,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "a4b0bb": {
-        "callsign": "DAL214",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "a78d73": {
         "callsign": "DAL1208",
         "route_checked": true,
@@ -615,13 +454,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "a04c67": {
-        "callsign": "CSB7506",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "ab6c08": {
         "callsign": "DAL738",
         "route_checked": true,
@@ -636,20 +468,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "c060c8": {
-        "callsign": "POE291",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "ab271f": {
-        "callsign": "AAL3306",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "aa9bb7": {
         "callsign": "AMX409",
         "route_checked": true,
@@ -659,20 +477,6 @@
     },
     "ab649a": {
         "callsign": "DAL37",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "3949ec": {
-        "callsign": "AFR378E",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "346057": {
-        "callsign": "IBE5107",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -706,57 +510,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "7c4920": {
-        "callsign": "QFA2",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "896459": {
         "callsign": "UAE93P",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "76cd72": {
-        "callsign": "SIA319",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "4cc481": {
-        "callsign": "ABD4812",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "040204": {
-        "callsign": "ETH735",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "a4cb6f": {
-        "callsign": "GTI5579",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "896407": {
-        "callsign": "ETD3AG",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "896217": {
-        "callsign": "UAE150",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -832,29 +587,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "a79898": {
-        "callsign": "DAL1706",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "a7fbb3": {
-        "callsign": "UPS65",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "48436a": {
         "callsign": "KLM192",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "a0ce68": {
-        "callsign": "FDX9121",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -937,29 +671,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "a09b65": {
-        "callsign": "CSB7509",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "c06178": {
         "callsign": "POE405",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "c051e4": {
-        "callsign": "ACA840",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "4851af": {
-        "callsign": "KLM204",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -1007,36 +720,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "3c6719": {
-        "callsign": "DLH412",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "4cc279": {
-        "callsign": "ICE631",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "347343": {
-        "callsign": "IBE5106",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "406a9d": {
         "callsign": "BAW99",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "448465": {
-        "callsign": "ICL942",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -1065,13 +750,6 @@
     },
     "8963dd": {
         "callsign": "UAE194",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "4ac985": {
-        "callsign": "SWN376",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -1126,13 +804,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "406add": {
-        "callsign": "EXS54KM",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "040240": {
         "callsign": "ETH701",
         "route_checked": true,
@@ -1154,71 +825,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "4d012f": {
-        "callsign": "CLX54",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "4b18fc": {
-        "callsign": "SWR282",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "4b1921": {
-        "callsign": "SWR176",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "4cc278": {
-        "callsign": "ICE217",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "45cf23": {
-        "callsign": "UPS291",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "896192": {
         "callsign": "UAE374",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "300a62": {
-        "callsign": "ITY758",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "846def": {
-        "callsign": "NCA039",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "abf0c7": {
-        "callsign": "FDX60",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "aa580e": {
-        "callsign": "CKS699",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -1231,22 +839,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "a8c4d8": {
-        "callsign": "",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "4b191f": {
         "callsign": "SWR160",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "151ffa": {
-        "callsign": "AFL1072",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -1301,20 +895,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "4d0112": {
-        "callsign": "CLX5161",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "800582": {
-        "callsign": "AIC4174",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "484368": {
         "callsign": "KLM282",
         "route_checked": true,
@@ -1343,20 +923,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "84118c": {
-        "callsign": "JAL15",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "76ceef": {
-        "callsign": "SIA11",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "c0611f": {
         "callsign": "ACA308",
         "route_checked": true,
@@ -1366,13 +932,6 @@
     },
     "c0619b": {
         "callsign": "POE662",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "3965aa": {
-        "callsign": "AFR021",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -1392,29 +951,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "4b15d7": {
-        "callsign": "EDW10K",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "405bfb": {
-        "callsign": "BAW87",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "a4dbef": {
         "callsign": "DAL145",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "4851f5": {
-        "callsign": "KLM219",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -1436,13 +974,6 @@
     },
     "a8df4b": {
         "callsign": "DAL2238",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "a40e1c": {
-        "callsign": "UPS2986",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -1478,13 +1009,6 @@
     },
     "ae03e1": {
         "callsign": "CNV3176",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "89912d": {
-        "callsign": "EVA697",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -1560,13 +1084,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "a0b20e": {
-        "callsign": "FDX9123",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "aa3b05": {
         "callsign": "UAL1577",
         "route_checked": true,
@@ -1583,13 +1100,6 @@
     },
     "ae026d": {
         "callsign": "",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "781941": {
-        "callsign": "CSN428",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -1672,22 +1182,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "e80244": {
-        "callsign": "LPE2695",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "c06197": {
         "callsign": "POE309",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "840a64": {
-        "callsign": "JAL4",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -1735,13 +1231,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "a613e7": {
-        "callsign": "ATN3347",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "a86ab5": {
         "callsign": "UAL321",
         "route_checked": true,
@@ -1777,13 +1266,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "a124b5": {
-        "callsign": "DAL232",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "484561": {
         "callsign": "KLM133",
         "route_checked": true,
@@ -1798,20 +1280,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "aaffa2": {
-        "callsign": "AAL742",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "780231": {
-        "callsign": "CPA3295",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "478f5c": {
         "callsign": "SAS910",
         "route_checked": true,
@@ -1819,57 +1287,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "3c7a4c": {
-        "callsign": "CFG039",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "39d2a8": {
-        "callsign": "AFR333F",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "39d2a4": {
-        "callsign": "AFR63J",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "c06196": {
-        "callsign": "POE494",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "a12fda": {
-        "callsign": "DAL209",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "a4d483": {
-        "callsign": "DAL4",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "486073": {
         "callsign": "KLM643",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "c06173": {
-        "callsign": "POE256",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -1938,20 +1357,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "e49641": {
-        "callsign": "AZU2675",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "89610f": {
-        "callsign": "UAE247",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "8963e5": {
         "callsign": "UAE232",
         "route_checked": true,
@@ -1994,13 +1399,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "3c70b4": {
-        "callsign": "BCS4GC",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "8960ec": {
         "callsign": "UAE28Y",
         "route_checked": true,
@@ -2017,13 +1415,6 @@
     },
     "76cefa": {
         "callsign": "SIA321",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "4cae27": {
-        "callsign": "BCS59X",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -2064,20 +1455,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "4b191a": {
-        "callsign": "SWR92",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "a08a8f": {
-        "callsign": "FDX5187",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "45ce47": {
         "callsign": "UPS267",
         "route_checked": true,
@@ -2092,43 +1469,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "4cacb9": {
-        "callsign": "ITY674",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "896111": {
         "callsign": "UAE35Q",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "a41cf8": {
-        "callsign": "UPS287",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "3c671a": {
-        "callsign": "DLH726",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "3c670f": {
-        "callsign": "DLH768",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "48ae20": {
-        "callsign": "LOT79",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -2143,13 +1485,6 @@
     },
     "89618d": {
         "callsign": "UAE7Q",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "78071b": {
-        "callsign": "HLF9817",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -2211,27 +1546,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "8478ab": {
-        "callsign": "NCA228",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "847183": {
-        "callsign": "NCA202",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "841538": {
-        "callsign": "JAL303",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "300a44": {
         "callsign": "LSI220",
         "route_checked": true,
@@ -2260,31 +1574,10 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "ae037c": {
-        "callsign": "",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "44cc41": {
-        "callsign": "BEL9LT",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "48af05": {
         "callsign": "LOT7MA",
         "route_checked": true,
         "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "504e86": {
-        "callsign": "FIA6815",
-        "route_checked": true,
-        "alerted": true,
         "route": "Unknown Route",
         "emergency_alerted": false
     },
@@ -2293,27 +1586,6 @@
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "8964a2": {
-        "callsign": "UAE29U",
-        "route_checked": true,
-        "alerted": false,
-        "route": "GVA \u27a1\ufe0f DXB (EK84)",
-        "emergency_alerted": false
-    },
-    "4067a3": {
-        "callsign": "DHK950",
-        "route_checked": true,
-        "alerted": false,
-        "route": "EMA \u27a1\ufe0f DXB (D0950)",
-        "emergency_alerted": false
-    },
-    "06a2e3": {
-        "callsign": "QTR8282",
-        "route_checked": true,
-        "alerted": false,
-        "route": "BSL \u27a1\ufe0f DOH (QR8282)",
         "emergency_alerted": false
     },
     "abba6c": {
@@ -2372,27 +1644,6 @@
         "route": "ANC \u27a1\ufe0f ORD (KE8231)",
         "emergency_alerted": false
     },
-    "a599ec": {
-        "callsign": "N460DF",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "71be42": {
-        "callsign": "KAL018",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "ae07e9": {
-        "callsign": "COHO93",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "ae04eb": {
         "callsign": "",
         "route_checked": true,
@@ -2407,13 +1658,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "a4c703": {
-        "callsign": "DAL220",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "47c1c2": {
         "callsign": "SAS931",
         "route_checked": true,
@@ -2421,29 +1665,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "a2aab5": {
-        "callsign": "FDX1136",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "0d120c": {
-        "callsign": "MXA2993A",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "ae147f": {
         "callsign": "OTIS27",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "c08861": {
-        "callsign": "POE294",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -2561,13 +1784,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "ae5dec": {
-        "callsign": "",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "3949e9": {
         "callsign": "AFR327",
         "route_checked": true,
@@ -2617,22 +1833,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "a544ee": {
-        "callsign": "DAL256",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "39d2a3": {
         "callsign": "AFR52X",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "4b15a2": {
-        "callsign": "SWR2V",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -2701,13 +1903,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "485ecc": {
-        "callsign": "KLM791",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "33fe7d": {
         "callsign": "IAM1425",
         "route_checked": true,
@@ -2717,13 +1912,6 @@
     },
     "896621": {
         "callsign": "UAE78P",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "408143": {
-        "callsign": "DHK869",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -2764,13 +1952,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "39cf0d": {
-        "callsign": "AFR406",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "39644c": {
         "callsign": "AFR930",
         "route_checked": true,
@@ -2780,20 +1961,6 @@
     },
     "3965b0": {
         "callsign": "AFR256",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "45ce57": {
-        "callsign": "SRR6315",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "400b4b": {
-        "callsign": "DHK373",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -2820,13 +1987,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "8940d1": {
-        "callsign": "DHX752",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "8940c4": {
         "callsign": "BCS8TH",
         "route_checked": true,
@@ -2843,13 +2003,6 @@
     },
     "ad7633": {
         "callsign": "AMX071",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "4cae24": {
-        "callsign": "BCS44C",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -2883,29 +2036,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "86951c": {
-        "callsign": "ANA212",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "4bb14f": {
-        "callsign": "THY6218",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "710052": {
         "callsign": "SVA753",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "89667e": {
-        "callsign": "UAE441",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -2925,13 +2057,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "758304": {
-        "callsign": "PAL1842",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "346419": {
         "callsign": "IBE0281",
         "route_checked": true,
@@ -2946,41 +2071,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "407f2c": {
-        "callsign": "BAW7",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "861b47": {
-        "callsign": "ANA8512",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "769105": {
-        "callsign": "SIA7408",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "847294": {
-        "callsign": "JAL901",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "845daa": {
-        "callsign": "ANA411",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "8744d4": {
         "callsign": "ANA1075",
         "route_checked": true,
@@ -2988,43 +2078,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "86222e": {
-        "callsign": "JAL501",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "861ebc": {
-        "callsign": "JAL141",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "861e70": {
-        "callsign": "ANA987",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "adfdd8": {
-        "callsign": "GOFER02",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "3c4598": {
         "callsign": "BOX719",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "4bb153": {
-        "callsign": "THY6139",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -3044,20 +2099,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "8682da": {
-        "callsign": "JAL46",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "600b26": {
-        "callsign": "",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "ae146c": {
         "callsign": "RCH5001",
         "route_checked": true,
@@ -3065,32 +2106,11 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "7335b4": {
-        "callsign": "IRM091",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "4ca34e": {
-        "callsign": "SVA915",
-        "route_checked": true,
-        "alerted": false,
-        "route": "JED \u27a1\ufe0f LGG (SV915)",
-        "emergency_alerted": false
-    },
     "896483": {
         "callsign": "UAE96",
         "route_checked": true,
         "alerted": false,
         "route": "FCO \u27a1\ufe0f DXB (EK96)",
-        "emergency_alerted": false
-    },
-    "406b12": {
-        "callsign": "TOM9YC",
-        "route_checked": true,
-        "alerted": false,
-        "route": "AYT \u27a1\ufe0f LGW (BY459)",
         "emergency_alerted": false
     },
     "14fc25": {
@@ -3121,32 +2141,11 @@
         "route": "EHU \u27a1\ufe0f ANC (5Y8609)",
         "emergency_alerted": false
     },
-    "aa7468": {
-        "callsign": "CKS202",
-        "route_checked": true,
-        "alerted": false,
-        "route": "CVG \u27a1\ufe0f NRT (K4202)",
-        "emergency_alerted": false
-    },
-    "ab9a5b": {
-        "callsign": "FDX14",
-        "route_checked": true,
-        "alerted": false,
-        "route": "KIX \u27a1\ufe0f IND (FX14)",
-        "emergency_alerted": false
-    },
     "71be24": {
         "callsign": "KAL8245",
         "route_checked": true,
         "alerted": false,
         "route": "ICN \u27a1\ufe0f DFW (KE8245)",
-        "emergency_alerted": false
-    },
-    "86e890": {
-        "callsign": "JAL799",
-        "route_checked": true,
-        "alerted": false,
-        "route": "HNL \u27a1\ufe0f KIX (JL799)",
         "emergency_alerted": false
     },
     "aa7bd6": {
@@ -3352,13 +2351,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "a4eacb": {
-        "callsign": "DAL142",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "40797c": {
         "callsign": "BAW71K",
         "route_checked": true,
@@ -3408,13 +2400,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "a92b0c": {
-        "callsign": "DAL386",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "a76f43": {
         "callsign": "UAL2633",
         "route_checked": true,
@@ -3429,13 +2414,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "a6b47c": {
-        "callsign": "DAL291",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "3c65ac": {
         "callsign": "DLH481",
         "route_checked": true,
@@ -3445,13 +2423,6 @@
     },
     "48436c": {
         "callsign": "KLM635",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "3c70c8": {
-        "callsign": "GEC8224",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -3555,13 +2526,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "a6cf20": {
-        "callsign": "LAE1803",
-        "route_checked": true,
-        "alerted": false,
-        "route": "MIA \u27a1\ufe0f SJO (L71803)",
-        "emergency_alerted": false
-    },
     "a486be": {
         "callsign": "ABX480",
         "route_checked": true,
@@ -3625,13 +2589,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "abbb2c": {
-        "callsign": "DAL55",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "a78605": {
         "callsign": "DAL1243",
         "route_checked": true,
@@ -3641,13 +2598,6 @@
     },
     "a49ce2": {
         "callsign": "ATN3373",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "ab38aa": {
-        "callsign": "DAL2189",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -3697,13 +2647,6 @@
     },
     "a76f6d": {
         "callsign": "UAL599",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "e490c8": {
-        "callsign": "LTG8473",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -3779,13 +2722,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "3965ae": {
-        "callsign": "AFR504",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "a736c1": {
         "callsign": "LCO1503",
         "route_checked": true,
@@ -3795,13 +2731,6 @@
     },
     "406b0a": {
         "callsign": "BAW216",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "a62778": {
-        "callsign": "GTI040",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -3872,13 +2801,6 @@
     },
     "c060c6": {
         "callsign": "POE375",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "346456": {
-        "callsign": "IBE0152",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -3982,13 +2904,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "a53d80": {
-        "callsign": "DAL156",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "478f47": {
         "callsign": "SAS928",
         "route_checked": true,
@@ -4012,13 +2927,6 @@
     },
     "a52736": {
         "callsign": "DAL62",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "48506c": {
-        "callsign": "TFL365",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -4052,34 +2960,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "0c21ad": {
-        "callsign": "DAE1321",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "a15ebc": {
-        "callsign": "DAL244",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "345109": {
-        "callsign": "IBE0169",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "39cf09": {
-        "callsign": "AFR348F",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "e4966d": {
         "callsign": "AZU4791",
         "route_checked": true,
@@ -4103,20 +2983,6 @@
     },
     "e49a8a": {
         "callsign": "AZU2951",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "e4967f": {
-        "callsign": "AZU4410",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "e49608": {
-        "callsign": "AZU4546",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -4157,29 +3023,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "406d27": {
-        "callsign": "EXS49YF",
-        "route_checked": true,
-        "alerted": false,
-        "route": "MAN \u27a1\ufe0f TFS (LS917)",
-        "emergency_alerted": false
-    },
-    "40787b": {
-        "callsign": "TOM1WH",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "a756d2": {
         "callsign": "LCO1511",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "34520e": {
-        "callsign": "IBE09ZW",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -4367,13 +3212,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "440bc6": {
-        "callsign": "BCS169",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "4d20db": {
         "callsign": "AEZ9863",
         "route_checked": true,
@@ -4397,13 +3235,6 @@
     },
     "896474": {
         "callsign": "UAE39L",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "3c6564": {
-        "callsign": "OCN133",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -4451,29 +3282,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "76cd71": {
-        "callsign": "SIA325",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "461f5b": {
-        "callsign": "FIN132",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "3c6704": {
         "callsign": "DLH732",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "06a391": {
-        "callsign": "QTR8837",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -4493,43 +3303,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "485f83": {
-        "callsign": "KLM880",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "89653e": {
         "callsign": "ETD49D",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "71002c": {
-        "callsign": "SVA853",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "406890": {
-        "callsign": "BAW138",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "89620e": {
-        "callsign": "UAE708",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "710124": {
-        "callsign": "SVA887",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -4570,27 +3345,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "800b05": {
-        "callsign": "BDA481",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "5140d1": {
-        "callsign": "IGT1189",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "71005c": {
-        "callsign": "SVA815",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "4074e2": {
         "callsign": "BAW119",
         "route_checked": true,
@@ -4598,22 +3352,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "4d012d": {
-        "callsign": "CLX7441",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "896622": {
         "callsign": "UAE390",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "89644e": {
-        "callsign": "UAE416",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -4633,22 +3373,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "896305": {
-        "callsign": "UAE371",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "86e452": {
         "callsign": "JAL754",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "4bb159": {
-        "callsign": "THY6262",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -4717,62 +3443,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "8850b0": {
-        "callsign": "THA316",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "888152": {
-        "callsign": "HVN18",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "885281": {
-        "callsign": "THA911",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "885179": {
-        "callsign": "THA931",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "8852e4": {
-        "callsign": "THA935",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "86d288": {
-        "callsign": "ANA877",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "885102": {
-        "callsign": "THA961",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "a07bb3": {
-        "callsign": "FDX6159",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "aa21bf": {
         "callsign": "ATN731",
         "route_checked": true,
@@ -4794,34 +3464,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "76cd74": {
-        "callsign": "SIA317",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "80159e": {
-        "callsign": "AIC309",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "06a1eb": {
-        "callsign": "QTR8939",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "a3577d": {
-        "callsign": "UPS167",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "8880a1": {
         "callsign": "HVN634",
         "route_checked": true,
@@ -4829,141 +3471,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "88812b": {
-        "callsign": "HVN36",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "71bc19": {
-        "callsign": "AIH934",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "8880b5": {
-        "callsign": "HVN7151",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "8a0a26": {
-        "callsign": "ATLAS02",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "a84343": {
-        "callsign": "UPS71",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "ac5fd6": {
-        "callsign": "FDX5217",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "3c4599": {
-        "callsign": "BOX525",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "3c4585": {
-        "callsign": "",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "781ff2": {
-        "callsign": "",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "76cd14": {
         "callsign": "SIA800",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "a4e7c9": {
-        "callsign": "GTI8976",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "48ae24": {
-        "callsign": "LOT99",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "39d2b3": {
-        "callsign": "AFR264",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "86cf16": {
-        "callsign": "ANA220",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "7bd024": {
-        "callsign": "CYZ9096",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "406f73": {
-        "callsign": "BAW169",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "a046b6": {
-        "callsign": "FDX5158",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "452181": {
-        "callsign": "ADZ9190",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "758339": {
-        "callsign": "PAL1851",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "8990a6": {
-        "callsign": "CAL5381",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -4983,36 +3492,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "71be20": {
-        "callsign": "AIH794",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "758369": {
-        "callsign": "PAL401",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "71c226": {
-        "callsign": "KAL336",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "a3918f": {
         "callsign": "UPS196",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "a04a6d": {
-        "callsign": "FDX5926",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -5025,29 +3506,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "862d72": {
-        "callsign": "JAL900A",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "888138": {
-        "callsign": "HVN428",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "ac10d8": {
         "callsign": "FDX6028",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "76cc65": {
-        "callsign": "SIA672",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -5109,13 +3569,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "8852e5": {
-        "callsign": "THA644",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "87cc0a": {
         "callsign": "GALOP61",
         "route_checked": true,
@@ -5153,13 +3606,6 @@
     },
     "8682fc": {
         "callsign": "JAL305",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "874846": {
-        "callsign": "ANA13",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -5242,13 +3688,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "7c5320": {
-        "callsign": "QFA26",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "86ef8e": {
         "callsign": "ANA882",
         "route_checked": true,
@@ -5277,27 +3716,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "76cc70": {
-        "callsign": "SIA638",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "88812d": {
-        "callsign": "HVN781",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "7c66e4": {
-        "callsign": "QFA7321",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "89647c": {
         "callsign": "UAE3HJ",
         "route_checked": true,
@@ -5305,50 +3723,8 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "7c1475": {
-        "callsign": "QFA112",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "c82347": {
-        "callsign": "ANZ77",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "c81d80": {
-        "callsign": "ANZ284",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "c8234f": {
         "callsign": "ANZ99",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "c820f2": {
-        "callsign": "ANZ952",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "151fe5": {
-        "callsign": "AFL626",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "4b191d": {
-        "callsign": "SWR180",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -5377,48 +3753,6 @@
     },
     "a3d91f": {
         "callsign": "UPS127",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "06a1ea": {
-        "callsign": "QTR8083",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "600851": {
-        "callsign": "AHY810",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "151dcb": {
-        "callsign": "AFL1482",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "ae10b7": {
-        "callsign": "",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "151ff4": {
-        "callsign": "AFL2145",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "7815a5": {
-        "callsign": "CSS7202",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
@@ -5459,20 +3793,6 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "899107": {
-        "callsign": "",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "a8f77c": {
-        "callsign": "UAL964",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
     "461f50": {
         "callsign": "FIN99",
         "route_checked": true,
@@ -5483,21 +3803,7 @@
     "ae013d": {
         "callsign": "",
         "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "ae1525": {
-        "callsign": "SUMO93",
-        "route_checked": true,
-        "alerted": false,
-        "route": "Unknown Route",
-        "emergency_alerted": false
-    },
-    "461f4f": {
-        "callsign": "FIN100",
-        "route_checked": true,
-        "alerted": false,
+        "alerted": true,
         "route": "Unknown Route",
         "emergency_alerted": false
     },
@@ -5522,8 +3828,1779 @@
         "route": "Unknown Route",
         "emergency_alerted": false
     },
-    "48af0b": {
-        "callsign": "LOT727",
+    "8964fc": {
+        "callsign": "",
+        "route_checked": true,
+        "alerted": false,
+        "route": "MAD \u27a1\ufe0f AUH (EY104)",
+        "emergency_alerted": false
+    },
+    "8963d2": {
+        "callsign": "UAE8T",
+        "route_checked": true,
+        "alerted": false,
+        "route": "ZRH \u27a1\ufe0f DXB (EK86)",
+        "emergency_alerted": false
+    },
+    "405bfe": {
+        "callsign": "BAW63",
+        "route_checked": true,
+        "alerted": false,
+        "route": "LHR \u27a1\ufe0f NBO (BA63)",
+        "emergency_alerted": false
+    },
+    "ac3857": {
+        "callsign": "",
+        "route_checked": true,
+        "alerted": false,
+        "route": "CDG \u27a1\ufe0f BOM (FX8)",
+        "emergency_alerted": false
+    },
+    "4075f3": {
+        "callsign": "TOM397",
+        "route_checked": true,
+        "alerted": false,
+        "route": "SSH \u27a1\ufe0f MAN (BY397)",
+        "emergency_alerted": false
+    },
+    "40717e": {
+        "callsign": "EXS5TV",
+        "route_checked": true,
+        "alerted": false,
+        "route": "LCA \u27a1\ufe0f LBA (LS480)",
+        "emergency_alerted": false
+    },
+    "8015f7": {
+        "callsign": "AIC101",
+        "route_checked": true,
+        "alerted": false,
+        "route": "DEL \u27a1\ufe0f FCO (AI101)",
+        "emergency_alerted": false
+    },
+    "3c64b1": {
+        "callsign": "DLH691",
+        "route_checked": true,
+        "alerted": true,
+        "route": "TLV \u27a1\ufe0f ATH (LH691)",
+        "emergency_alerted": false
+    },
+    "ae0149": {
+        "callsign": "",
+        "route_checked": true,
+        "alerted": true,
+        "route": "TLV \u27a1\ufe0f N/A (None)",
+        "emergency_alerted": false
+    },
+    "7448a6": {
+        "callsign": "RJA507",
+        "route_checked": true,
+        "alerted": false,
+        "route": "AMM \u27a1\ufe0f CAI (RJ507)",
+        "emergency_alerted": false
+    },
+    "89653b": {
+        "callsign": "ETD18M",
+        "route_checked": true,
+        "alerted": false,
+        "route": "FRA \u27a1\ufe0f AUH (EY124)",
+        "emergency_alerted": false
+    },
+    "89630c": {
+        "callsign": "UAE7DN",
+        "route_checked": true,
+        "alerted": false,
+        "route": "VIE \u27a1\ufe0f DXB (EK126)",
+        "emergency_alerted": false
+    },
+    "86e808": {
+        "callsign": "JAL73",
+        "route_checked": true,
+        "alerted": false,
+        "route": "HNL \u27a1\ufe0f HND (JL73)",
+        "emergency_alerted": false
+    },
+    "a173a8": {
+        "callsign": "DAL427",
+        "route_checked": true,
+        "alerted": false,
+        "route": "HNL \u27a1\ufe0f LAX (DL427)",
+        "emergency_alerted": false
+    },
+    "4d0119": {
+        "callsign": "CLX58C",
+        "route_checked": true,
+        "alerted": false,
+        "route": "ANC \u27a1\ufe0f LAX (None)",
+        "emergency_alerted": false
+    },
+    "781d8d": {
+        "callsign": "CKK226",
+        "route_checked": true,
+        "alerted": false,
+        "route": "ORD \u27a1\ufe0f PVG (CK226)",
+        "emergency_alerted": false
+    },
+    "71bc36": {
+        "callsign": "AIH244",
+        "route_checked": true,
+        "alerted": false,
+        "route": "ANC \u27a1\ufe0f ORD (KJ244)",
+        "emergency_alerted": false
+    },
+    "a8180d": {
+        "callsign": "UPS109",
+        "route_checked": true,
+        "alerted": false,
+        "route": "ANC \u27a1\ufe0f SDF (5X109)",
+        "emergency_alerted": false
+    },
+    "7805aa": {
+        "callsign": "CSG2523",
+        "route_checked": true,
+        "alerted": false,
+        "route": "ANC \u27a1\ufe0f NLU (CSG2523)",
+        "emergency_alerted": false
+    },
+    "a75f15": {
+        "callsign": "UPS99",
+        "route_checked": true,
+        "alerted": false,
+        "route": "ANC \u27a1\ufe0f SDF (5X99)",
+        "emergency_alerted": false
+    },
+    "a34c58": {
+        "callsign": "UPS105",
+        "route_checked": true,
+        "alerted": false,
+        "route": "ANC \u27a1\ufe0f SDF (5X105)",
+        "emergency_alerted": false
+    },
+    "899017": {
+        "callsign": "CAL5319",
+        "route_checked": true,
+        "alerted": false,
+        "route": "YYZ \u27a1\ufe0f ANC (CI5319)",
+        "emergency_alerted": false
+    },
+    "780a6e": {
+        "callsign": "CPA097",
+        "route_checked": true,
+        "alerted": false,
+        "route": "GDL \u27a1\ufe0f ANC (CX97)",
+        "emergency_alerted": false
+    },
+    "c02fb8": {
+        "callsign": "ACA9",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "899137": {
+        "callsign": "EVA641",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "8694fa": {
+        "callsign": "ANA108",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "769101": {
+        "callsign": "SIA7430",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c7a47": {
+        "callsign": "CFG3HK",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c7a4e": {
+        "callsign": "CFG3ZK",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a7133f": {
+        "callsign": "DAL555",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "4d0102": {
+        "callsign": "CLX278",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c4b2c": {
+        "callsign": "DLH457",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "394a02": {
+        "callsign": "AFR23G",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a71aad": {
+        "callsign": "DAL778",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c7a43": {
+        "callsign": "CFG441",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c66c4": {
+        "callsign": "DLH476",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a4dfa6": {
+        "callsign": "DAL56",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a109c8": {
+        "callsign": "UPS9746",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "406b22": {
+        "callsign": "BAW7D",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c670c": {
+        "callsign": "DLH458",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "ad5ca7": {
+        "callsign": "FDX1332",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "4cc2a3": {
+        "callsign": "ICE670",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "8990a4": {
+        "callsign": "CAL5236",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "adfdd3": {
+        "callsign": "SHAGGY3",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a3396b": {
+        "callsign": "ATN3339",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "ac0906": {
+        "callsign": "AAL130",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a95881": {
+        "callsign": "CKS602",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "899105": {
+        "callsign": "CAL5233",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a8521f": {
+        "callsign": "UPS94",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a8e1f6": {
+        "callsign": "DAL517",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3444c4": {
+        "callsign": "IBE03CY",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "ab3c61": {
+        "callsign": "DAL1134",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "34520f": {
+        "callsign": "IBE02CR",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "ab2b2c": {
+        "callsign": "DAL759",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a54137": {
+        "callsign": "DAL16",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a05614": {
+        "callsign": "DAL1150",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a3c68c": {
+        "callsign": "UPS391",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a8e262": {
+        "callsign": "DAL2990",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a948c4": {
+        "callsign": "DAL2720",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a77ae0": {
+        "callsign": "DAL2225",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "ae54d3": {
+        "callsign": "",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c458d": {
+        "callsign": "BOX448",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a8e279": {
+        "callsign": "DAL2345",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "e80212": {
+        "callsign": "LPE2694",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a0cbff": {
+        "callsign": "UPS9722",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c66c3": {
+        "callsign": "DLH4W",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a44477": {
+        "callsign": "UPS9747",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "c0618c": {
+        "callsign": "POE427",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "c0884f": {
+        "callsign": "POE129",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "e07246": {
+        "callsign": "ARG1303",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a94156": {
+        "callsign": "DAL983",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "c04aed": {
+        "callsign": "CJT9001",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "ac17e6": {
+        "callsign": "AAL9604",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "39cf04": {
+        "callsign": "AFR75K",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "347519": {
+        "callsign": "IBE0125",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a0a900": {
+        "callsign": "BOE123",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "abb325": {
+        "callsign": "GTI8028",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "4007f1": {
+        "callsign": "BAW23K",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "c08864": {
+        "callsign": "POE166",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c6519": {
+        "callsign": "DLH419",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "aa44ac": {
+        "callsign": "UAL260",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c6565": {
+        "callsign": "OCN539",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "c060c0": {
+        "callsign": "POE392",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "ac0cab": {
+        "callsign": "AAL722",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a77c11": {
+        "callsign": "UAL238",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a7a08a": {
+        "callsign": "UAL170",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3965a7": {
+        "callsign": "AFR380V",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a0f4f6": {
+        "callsign": "DAL216",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "40742e": {
+        "callsign": "UBT70Z",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c4a13": {
+        "callsign": "DLH479",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "48ae22": {
+        "callsign": "LOT57V",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "781e2b": {
+        "callsign": "CKK232",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "adfdd4": {
+        "callsign": "YANKE21",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a88d10": {
+        "callsign": "DAL8841",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "4cadc9": {
+        "callsign": "ITY603",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c64f4": {
+        "callsign": "DLH404",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "c02028": {
+        "callsign": "MAL7082",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "39d2a2": {
+        "callsign": "AFR490",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3965a1": {
+        "callsign": "AFR010",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "c08862": {
+        "callsign": "POE236",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "394a13": {
+        "callsign": "AFR358P",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a8cc46": {
+        "callsign": "UAL921",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "48ae05": {
+        "callsign": "LOT4TL",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "ac1076": {
+        "callsign": "AAL9782",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "347206": {
+        "callsign": "IBE0153",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a8b9b3": {
+        "callsign": "UAL380",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "e80421": {
+        "callsign": "LAE2535",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "e495fc": {
+        "callsign": "AZU4809",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "e49640": {
+        "callsign": "AZU2861",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "e495d8": {
+        "callsign": "AZU4583",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "39d2b5": {
+        "callsign": "AFR459",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "e49f44": {
+        "callsign": "AZU2856",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "e49f5a": {
+        "callsign": "AZU4024",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "4cadfb": {
+        "callsign": "ITY675",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "344346": {
+        "callsign": "IBE3268",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "347659": {
+        "callsign": "IBE5102",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "4cadc7": {
+        "callsign": "ITY673",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "e07211": {
+        "callsign": "ARG1141",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "896462": {
+        "callsign": "ETD8MY",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "40755f": {
+        "callsign": "EXS92W",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "346386": {
+        "callsign": "IBE5103",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "34520c": {
+        "callsign": "IBE3267",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a49e9a": {
+        "callsign": "UPS257",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "400663": {
+        "callsign": "DHK52H",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c5422": {
+        "callsign": "BCS5NR",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c64f3": {
+        "callsign": "DLH561",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c542f": {
+        "callsign": "BCS4HG",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "04018f": {
+        "callsign": "ETH553",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "440bce": {
+        "callsign": "BCS2210",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "700011": {
+        "callsign": "KMF9919",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "151ffc": {
+        "callsign": "AFL1512",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "151db4": {
+        "callsign": "AFL1708",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "151feb": {
+        "callsign": "AFL1524",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "76cce3": {
+        "callsign": "SIA21",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "7c806d": {
+        "callsign": "QFA219",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "394a18": {
+        "callsign": "AFR257",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "06a149": {
+        "callsign": "QTR38P",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "8965b9": {
+        "callsign": "",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "8960d9": {
+        "callsign": "UAE129",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "896187": {
+        "callsign": "UAE3MX",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "89653d": {
+        "callsign": "ETD5H3",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "896168": {
+        "callsign": "UAE221",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "896406": {
+        "callsign": "ETD5W2",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "8964a0": {
+        "callsign": "UAE213",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "896319": {
+        "callsign": "UAE9W",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "896624": {
+        "callsign": "UAE823",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "89617a": {
+        "callsign": "UAE348",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "896213": {
+        "callsign": "UAE5QL",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "7000a5": {
+        "callsign": "KMF902",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "89661e": {
+        "callsign": "UAE393",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "7103d7": {
+        "callsign": "SVA883",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "801612": {
+        "callsign": "AIC161",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "710415": {
+        "callsign": "SVA871",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "7000a1": {
+        "callsign": "AFG401",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "89639f": {
+        "callsign": "UAE75T",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "89611e": {
+        "callsign": "UAE359",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c4b21": {
+        "callsign": "DLH755",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "89611a": {
+        "callsign": "UAE349",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "89655c": {
+        "callsign": "UAE5AM",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "04002f": {
+        "callsign": "ETH611",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "39cf03": {
+        "callsign": "AFR198",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "77058f": {
+        "callsign": "ALK26L",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "710105": {
+        "callsign": "SVA828",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "8960f2": {
+        "callsign": "UAE377",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "484369": {
+        "callsign": "KLM843",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "151db5": {
+        "callsign": "AFL284",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "408016": {
+        "callsign": "DHK037",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "896615": {
+        "callsign": "UAE9849",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "7580d5": {
+        "callsign": "PAL655",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "8014cf": {
+        "callsign": "IGO9287",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "885156": {
+        "callsign": "THA346",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "88517a": {
+        "callsign": "THA921",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "88510e": {
+        "callsign": "THA936",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "15203c": {
+        "callsign": "AFL634",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "ac297b": {
+        "callsign": "FDX6092",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c458b": {
+        "callsign": "BOX548",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a7df59": {
+        "callsign": "UPS9",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "76cc75": {
+        "callsign": "SIA706",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "76ceeb": {
+        "callsign": "SIA950",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a5277d": {
+        "callsign": "GTI8153",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "ac3fc5": {
+        "callsign": "FDX6405",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c4583": {
+        "callsign": "BOX715",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "4bb152": {
+        "callsign": "",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "896357": {
+        "callsign": "ETD9675",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "781054": {
+        "callsign": "CSS302",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "aa7f8d": {
+        "callsign": "CKS255",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "780a6f": {
+        "callsign": "CPA3155",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "48455f": {
+        "callsign": "KLM895",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "8990ef": {
+        "callsign": "CAL5836",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c6703": {
+        "callsign": "DLH712",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "76cc6b": {
+        "callsign": "SIA224",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "4cad46": {
+        "callsign": "ITY792",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "78232f": {
+        "callsign": "YZR7935",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "abab90": {
+        "callsign": "FDX5174",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "4bb154": {
+        "callsign": "THY6585",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c6710": {
+        "callsign": "DLH718",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "71be03": {
+        "callsign": "KAL362",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "abe959": {
+        "callsign": "FDX6040",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "758525": {
+        "callsign": "PAL453",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "7583ed": {
+        "callsign": "PAL1810",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "78188d": {
+        "callsign": "CSS141",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "86ef06": {
+        "callsign": "ANA862",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "abed37": {
+        "callsign": "GTI8559",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "888129": {
+        "callsign": "HVN422",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "861f44": {
+        "callsign": "JAL38",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "841ff4": {
+        "callsign": "JAL302",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "845dee": {
+        "callsign": "ANA692",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "76cc6e": {
+        "callsign": "SIA618",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "861f00": {
+        "callsign": "JAL252",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "862dd8": {
+        "callsign": "JAL276",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "86d2ee": {
+        "callsign": "ANA672",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "861b28": {
+        "callsign": "JAL104",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "86d96c": {
+        "callsign": "ANA14",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "861f5e": {
+        "callsign": "ANA451",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "861e4e": {
+        "callsign": "ANA93",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "874518": {
+        "callsign": "ANA241",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "86ddb2": {
+        "callsign": "JAL103",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "862d50": {
+        "callsign": "JAL605",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "86d310": {
+        "callsign": "ANA671",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "840e10": {
+        "callsign": "JAL903",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "86787c": {
+        "callsign": "ANA463",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "861e78": {
+        "callsign": "JAL585",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "862d94": {
+        "callsign": "JAL551",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "87457e": {
+        "callsign": "ANA50",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "846f00": {
+        "callsign": "JAL500",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "780217": {
+        "callsign": "CPA2097",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "a4bc76": {
+        "callsign": "GTI7101",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "76cd04": {
+        "callsign": "SIA255",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "7cf83b": {
+        "callsign": "ASY693",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "7c1465": {
+        "callsign": "QFA119",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "76cd45": {
+        "callsign": "SIA298",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "151fed": {
+        "callsign": "AFL1394",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "151fe8": {
+        "callsign": "AFL484",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "394a03": {
+        "callsign": "AFR111",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "48ae01": {
+        "callsign": "LOT2081",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "ae0387": {
+        "callsign": "",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "4851b1": {
+        "callsign": "KLM809",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c4584": {
+        "callsign": "BOX620",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c4ad7": {
+        "callsign": "DLH780",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "78002c": {
+        "callsign": "",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "06a14b": {
+        "callsign": "QTR36L",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "ae1234": {
+        "callsign": "MOOSE32",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "8964e1": {
+        "callsign": "UAE319",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "1b2a23": {
+        "callsign": "",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "4d0117": {
+        "callsign": "CLX9001",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "78219a": {
+        "callsign": "HLF8815",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "4cc2a6": {
+        "callsign": "ICE455",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c70cc": {
+        "callsign": "GEC8384",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "485785": {
+        "callsign": "KLM855",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "09c02b": {
+        "callsign": "BTO4116",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "ae4e16": {
+        "callsign": "",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "44001b": {
+        "callsign": "AUA911F",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "44cc42": {
+        "callsign": "BEL7WC",
+        "route_checked": true,
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "3c6473": {
+        "callsign": "CFG9LD",
         "route_checked": true,
         "alerted": false,
         "route": "Unknown Route",
