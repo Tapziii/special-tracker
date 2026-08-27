@@ -41,7 +41,7 @@ SPECIAL_REGS = [
     "N24988", "N794UA", "N78017", "N77022", "N76021", "N218UA", "G-EUYP",
     "G-EUYR", "G-EUYS", "G-TTNA", "G-YMME", "G-YMMF", "G-YMMR", "G-YMMT",
     "G-YMMU", "G-STBN", "C-FSBV", "C-FIVM", "N411DX", "N521DN", "N522DZ",
-    "N527DN", "N531DN", "EC-NFZ", "EC-NJY",
+    "N527DN", "N531DN", "EC-NFZ", "EC-NJY", "D-ABDQ", "9H-EUM", "D-AEWM",
     
     # 777-300ERSF Registrations
     "9H-CAZ", "9H-CAY", "N5401T", "9H-GLG", "9H-JJB", "N779CK", "N771CK",
