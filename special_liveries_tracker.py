@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Global + Geofence Special Aircraft Tracker (GitHub Actions Version)
-Now with Stealth-Proof Hex Tracking & Military Heavy/Tanker Category Detection!
+Now with Route Retries & Strict Destination Checking!
 """
 
 import time
@@ -19,11 +19,9 @@ TLV_LAT = 32.0114
 TLV_LON = 34.8867
 TLV_RADIUS_NM = 440
 
-# Stealth-Proof Hex Codes (Cannot be hidden by pilots)
 SPECIAL_HEXES = ["738a01"] # 4X-ISR (Wing of Zion)
 
 SPECIAL_REGS = [
-    # Original Special Liveries
     "9H-EUM", "D-AEWM", "D-AEWP", "D-AIUA", "D-AIZH", "D-AIZM", "D-AIZN",
     "EI-DSY", "EI-EIB", "EI-EIE", "HB-IJN", "HB-IJO", "OE-LBO", "OE-LBY",
     "OE-LBZ", "HB-JLT", "D-ABYN", "D-AIMH", "D-AIFA", "D-AIXL", "D-ABPU",
@@ -41,17 +39,11 @@ SPECIAL_REGS = [
     "N24988", "N794UA", "N78017", "N77022", "N76021", "N218UA", "G-EUYP",
     "G-EUYR", "G-EUYS", "G-TTNA", "G-YMME", "G-YMMF", "G-YMMR", "G-YMMT",
     "G-YMMU", "G-STBN", "C-FSBV", "C-FIVM", "N411DX", "N521DN", "N522DZ",
-    "N527DN", "N531DN", "EC-NFZ", "EC-NJY", "D-ABDQ", "9H-EUM", "D-AEWM",
-    
-    # 777-300ERSF Registrations
+    "N527DN", "N531DN", "EC-NFZ", "EC-NJY",
     "9H-CAZ", "9H-CAY", "N5401T", "9H-GLG", "9H-JJB", "N779CK", "N771CK",
     "N770CK", "N778CK", "A6-EBK", "N162JL",
-    
-    # Other Non-777 Special Registrations
     "4X-CVD", "4X-CVE", "4X-CVJ", "4X-WIA", "4X-WIR", "4X-WIS", "4X-CVG",
-    "4X-CVI", "4X-CVH", "N216GA", "4X-AOO", "M-YULI", "4X-BAL", "4X-BAK",
-    "4X-AFG", "4X-AFC", "4X-AFG", "4X-AFV", "4X-AFG", "4X-AFK", "4X-AFU",
-    "4X-AFJ", "4X-AFY", "4X-AFA", "4X-AFS", "4X-AFL", "4X-AFH"
+    "4X-CVI", "4X-CVH", "N216GA", "4X-AOO"
 ]
 
 TARGET_AIRLINES = [
@@ -116,14 +108,14 @@ def get_flight_route(registration: str) -> str:
     if not registration or registration == "N/A": return "Unknown Route"
     try:
         url = f"https://api.flightradar24.com/common/v1/flight/list.json?query={registration}&fetchBy=reg"
-        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36", "Accept": "application/json"}
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
         res = requests.get(url, headers=headers, timeout=10)
         if res.status_code == 200:
             flights = res.json().get("result", {}).get("response", {}).get("data", [])
             for f in flights:
-                dep_time = f.get("time", {}).get("real", {}).get("departure")
                 arr_time = f.get("time", {}).get("real", {}).get("arrival")
-                if dep_time is not None and arr_time is None:
+                # If there's no arrival time yet, it's our active flight!
+                if arr_time is None:
                     orig = f.get("airport", {}).get("origin", {}).get("code", {}).get("iata", "N/A") if f.get("airport", {}).get("origin") else "N/A"
                     dest = f.get("airport", {}).get("destination", {}).get("code", {}).get("iata", "N/A") if f.get("airport", {}).get("destination") else "N/A"
                     flight_no = f.get("identification", {}).get("number", {}).get("default", "N/A")
@@ -204,7 +196,6 @@ def poll_sky():
         if hex_code not in tracked_flights:
             tracked_flights[hex_code] = {
                 "callsign": callsign, 
-                "route_checked": False, 
                 "alerted": False, 
                 "route": "Unknown Route", 
                 "emergency_alerted": False
@@ -214,12 +205,16 @@ def poll_sky():
         dist_str, eta_str = calculate_distance_eta(lat, lon, gs)
         
         if is_target:
-            if not state.get("route_checked"):
+            # Constantly re-check the route if it's currently Unknown!
+            if state.get("route", "Unknown Route") == "Unknown Route":
                 state["route"] = get_flight_route(reg)
-                state["route_checked"] = True
                 
             route = state["route"]
-            route_to_tlv = "TLV" in route or "LLBG" in route
+            
+            # Strictly check the DESTINATION side of the arrow for TLV/LLBG
+            dest_part = route.split("➡️")[-1] if "➡️" in route else route
+            route_to_tlv = "TLV" in dest_part or "LLBG" in dest_part
+            
             is_hidden_route = (route == "Unknown Route")
             
             is_heavy_military = is_military and category in ["A3", "A4", "A5"]
