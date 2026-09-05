@@ -43,7 +43,7 @@ SPECIAL_REGS = [
     "9H-CAZ", "9H-CAY", "N5401T", "9H-GLG", "9H-JJB", "N779CK", "N771CK",
     "N770CK", "N778CK", "A6-EBK", "N162JL",
     "4X-CVD", "4X-CVE", "4X-CVJ", "4X-WIA", "4X-WIR", "4X-WIS", "4X-CVG",
-    "4X-CVI", "4X-CVH", "N216GA", "4X-AOO"
+    "4X-CVI", "4X-CVH", "N216GA", "4X-AOO", "N302PF",
 ]
 
 TARGET_AIRLINES = [
