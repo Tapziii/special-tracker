@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Global + Geofence Special Aircraft Tracker
-Real-Time Burst Scanning, Telegram /check Command & Time-Filtered Routes!
+Real-Time Burst Scanning, Telegram /check Command & Anti-Spam Route Checking!
 """
 
 import time
@@ -114,6 +114,8 @@ def is_target_aircraft(hex_code: str, reg: str, ac_type: str, callsign: str, is_
 
 def get_flight_route(registration: str) -> str:
     if not registration or registration == "N/A": return "Unknown Route"
+    # Sleep to prevent Flightradar24 from banning the script for spamming!
+    time.sleep(0.4) 
     try:
         url = f"https://api.flightradar24.com/common/v1/flight/list.json?query={registration}&fetchBy=reg"
         headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
@@ -124,11 +126,7 @@ def get_flight_route(registration: str) -> str:
             for f in flights:
                 sch_dep = f.get("time", {}).get("scheduled", {}).get("departure", 0)
                 arr_time = f.get("time", {}).get("real", {}).get("arrival")
-                
-                # Filter out flights scheduled far in the future
-                if sch_dep > now + 3600:
-                    continue
-                    
+                if sch_dep > now + 3600: continue
                 if arr_time is None:
                     orig = f.get("airport", {}).get("origin", {}).get("code", {}).get("iata", "N/A") if f.get("airport", {}).get("origin") else "N/A"
                     dest = f.get("airport", {}).get("destination", {}).get("code", {}).get("iata", "N/A") if f.get("airport", {}).get("destination") else "N/A"
@@ -208,7 +206,7 @@ def check_telegram_commands():
                 chat_id = msg.get("chat", {}).get("id")
                 
                 if text == "/check" and str(chat_id) == str(TELEGRAM_CHAT_ID):
-                    send_telegram_alert("🔍 *Scanning airspace up to 1,500 NM away for target aircraft...*")
+                    send_telegram_alert("🔍 *Scanning airspace up to 1,500 NM away for target aircraft...*\n*(This takes ~45 seconds so FR24 doesn't block us!)*")
                     run_manual_scan()
     except Exception as e: pass
 
