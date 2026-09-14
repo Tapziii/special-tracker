@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Global + Geofence Special Aircraft Tracker
-Now with Real-Time Burst Scanning & Telegram /check Command!
+Real-Time Burst Scanning, Telegram /check Command & Time-Filtered Routes!
 """
 
 import time
@@ -119,9 +119,16 @@ def get_flight_route(registration: str) -> str:
         headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
         res = requests.get(url, headers=headers, timeout=10)
         if res.status_code == 200:
+            now = time.time()
             flights = res.json().get("result", {}).get("response", {}).get("data", [])
             for f in flights:
+                sch_dep = f.get("time", {}).get("scheduled", {}).get("departure", 0)
                 arr_time = f.get("time", {}).get("real", {}).get("arrival")
+                
+                # Filter out flights scheduled far in the future
+                if sch_dep > now + 3600:
+                    continue
+                    
                 if arr_time is None:
                     orig = f.get("airport", {}).get("origin", {}).get("code", {}).get("iata", "N/A") if f.get("airport", {}).get("origin") else "N/A"
                     dest = f.get("airport", {}).get("destination", {}).get("code", {}).get("iata", "N/A") if f.get("airport", {}).get("destination") else "N/A"
@@ -134,7 +141,8 @@ def get_flight_route(registration: str) -> str:
 def calculate_distance_eta(lat, lon, gs):
     if not lat or not lon or not isinstance(gs, (int, float)) or gs <= 0:
         return "Unknown", "Unknown"
-    R = 3440.065
+    
+    R = 3440.065 # Earth radius in NM
     dlat = math.radians(TLV_LAT - lat)
     dlon = math.radians(TLV_LON - lon)
     a = math.sin(dlat / 2)**2 + math.cos(math.radians(lat)) * math.cos(math.radians(TLV_LAT)) * math.sin(dlon / 2)**2
