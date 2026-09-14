@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Global + Geofence Special Aircraft Tracker (GitHub Actions Version)
-Now with Route Retries & Strict Destination Checking!
+Global + Geofence Special Aircraft Tracker
+Now with Real-Time Burst Scanning & Telegram /check Command!
 """
 
 import time
@@ -22,6 +22,7 @@ TLV_RADIUS_NM = 440
 SPECIAL_HEXES = ["738a01"] # 4X-ISR (Wing of Zion)
 
 SPECIAL_REGS = [
+    # Original Special Liveries
     "9H-EUM", "D-AEWM", "D-AEWP", "D-AIUA", "D-AIZH", "D-AIZM", "D-AIZN",
     "EI-DSY", "EI-EIB", "EI-EIE", "HB-IJN", "HB-IJO", "OE-LBO", "OE-LBY",
     "OE-LBZ", "HB-JLT", "D-ABYN", "D-AIMH", "D-AIFA", "D-AIXL", "D-ABPU",
@@ -40,21 +41,27 @@ SPECIAL_REGS = [
     "G-EUYR", "G-EUYS", "G-TTNA", "G-YMME", "G-YMMF", "G-YMMR", "G-YMMT",
     "G-YMMU", "G-STBN", "C-FSBV", "C-FIVM", "N411DX", "N521DN", "N522DZ",
     "N527DN", "N531DN", "EC-NFZ", "EC-NJY",
+    
+    # 777-300ERSF Registrations & Others
     "9H-CAZ", "9H-CAY", "N5401T", "9H-GLG", "9H-JJB", "N779CK", "N771CK",
     "N770CK", "N778CK", "A6-EBK", "N162JL",
     "4X-CVD", "4X-CVE", "4X-CVJ", "4X-WIA", "4X-WIR", "4X-WIS", "4X-CVG",
-    "4X-CVI", "4X-CVH", "N216GA", "4X-AOO", "N302PF",
+    "4X-CVI", "4X-CVH", "N216GA", "4X-AOO",
+    
+    # User New Additions
+    "YR-BGO", "EI-HXI", "4X-EKY"
 ]
 
 TARGET_AIRLINES = [
     "FJI", "HFA", "AFL", "CCM", "AXY", "AAF", "DJT", "QFA", "ANZ", "NBT", 
     "UBT", "IGO", "ANA", "GRL", "ARG", "AMX", "SIA", "THA", "JAL", "HVN", 
     "ALK", "KMM", "VLG", "FIN", "KZR", "EDW", "SVA", "ASL", "UAE", "OCN", 
-    "TOM", "TFL", "MBU", "EXS", "HFY", "HFM", "PAL", "AIB", "VSV"
+    "TOM", "TFL", "MBU", "EXS", "HFY", "HFM", "PAL", "AIB", "VSV",
+    "LAV", "BOX"
 ]
 
 TARGET_TYPE_PREFIXES = ('B74', 'A38', 'A34', 'A30', 'B75', 'B76', 'B77L', 'B778', 'B779', 'C17', 'C5', 'A124', 'T204', 'A310', 'K35R', 'C135', 'A400', 'E29', 'IL76', 'IL96', 'A3ST', 'A337', 'C130', 'C30J')
-GLOBAL_FETCH_TYPES = "B741,B742,B743,B744,B748,B74S,B74R,A388,A342,A343,A345,A346,A306,A30B,B752,B753,B762,B763,B764,B77L,B77W,B772,B778,B779,B788,B789,B78X,C17,C5,A124,T204,T214,A310,A319,A321,A332,A333,A339,A359,A35K,K35R,C135,A400,E290,E295,IL76,IL96,MD11,A3ST,A337,C130,C30J"
+GLOBAL_FETCH_TYPES = "B741,B742,B743,B744,B748,B74S,B74R,A388,A342,A343,A345,A346,A306,A30B,B752,B753,B762,B763,B764,B77L,B77W,B772,B778,B779,B788,B789,B78X,C17,C5,A124,T204,T214,A310,A319,A321,A332,A333,A339,A359,A35K,K35R,C135,A400,E290,E295,IL76,IL96,MD11,A3ST,A337,C130,C30J,A20N,A21N"
 
 IRREGULAR_COMBOS = [
     ("DLH", "A319"), ("DLH", "A333"), ("DLH", "A343"), ("DLH", "A346"), ("DLH", "A359"),
@@ -71,7 +78,8 @@ IRREGULAR_COMBOS = [
     ("DAL", "B763"), ("DAL", "B764"), ("ACA", "A333"), ("ETH", "B763"), ("ETH", "B77W"),
     ("AIC", "B77W"), ("AIC", "A359"), ("CHH", "A333"), ("MMZ", "B763"), ("MMZ", "B772"),
     ("MMZ", "A332"), ("MMZ", "A333"), ("MMZ", "A343"), ("OAE", "B763"), ("OAE", "B772"),
-    ("FDX", "MD11"), ("UPS", "MD11"), ("UPS", "B748"), ("CLX", "B748")
+    ("FDX", "MD11"), ("UPS", "MD11"), ("UPS", "B748"), ("CLX", "B748"),
+    ("TRA", "A20N"), ("TRA", "A21N"), ("TVF", "A20N"), ("TVF", "A21N")
 ]
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -114,7 +122,6 @@ def get_flight_route(registration: str) -> str:
             flights = res.json().get("result", {}).get("response", {}).get("data", [])
             for f in flights:
                 arr_time = f.get("time", {}).get("real", {}).get("arrival")
-                # If there's no arrival time yet, it's our active flight!
                 if arr_time is None:
                     orig = f.get("airport", {}).get("origin", {}).get("code", {}).get("iata", "N/A") if f.get("airport", {}).get("origin") else "N/A"
                     dest = f.get("airport", {}).get("destination", {}).get("code", {}).get("iata", "N/A") if f.get("airport", {}).get("destination") else "N/A"
@@ -127,8 +134,7 @@ def get_flight_route(registration: str) -> str:
 def calculate_distance_eta(lat, lon, gs):
     if not lat or not lon or not isinstance(gs, (int, float)) or gs <= 0:
         return "Unknown", "Unknown"
-    
-    R = 3440.065 # Earth radius in NM
+    R = 3440.065
     dlat = math.radians(TLV_LAT - lat)
     dlon = math.radians(TLV_LON - lon)
     a = math.sin(dlat / 2)**2 + math.cos(math.radians(lat)) * math.cos(math.radians(TLV_LAT)) * math.sin(dlon / 2)**2
@@ -143,6 +149,60 @@ def fetch_adsb_data(url: str):
         if res.status_code == 200: return res.json().get("ac", [])
     except: pass
     return []
+
+def run_manual_scan():
+    logging.info("Running manual /check scan...")
+    huge_radius_ac = fetch_adsb_data(f"https://api.adsb.lol/v2/lat/{TLV_LAT}/lon/{TLV_LON}/dist/1500")
+    
+    found_targets = []
+    for ac in huge_radius_ac:
+        hex_code = ac.get("hex", "").lower()
+        reg = ac.get("r", "").upper()
+        ac_type = ac.get("t", "").upper()
+        callsign = ac.get("flight", "").strip().upper()
+        category = ac.get("category", "")
+        is_military = bool(ac.get("dbFlags", 0) & 1)
+        
+        if is_target_aircraft(hex_code, reg, ac_type, callsign, is_military, category):
+            route = get_flight_route(reg)
+            dest_part = route.split("➡️")[-1] if "➡️" in route else route
+            if "TLV" in dest_part or "LLBG" in dest_part:
+                alt = ac.get("alt_baro", "Unknown")
+                gs = ac.get("gs", "Unknown")
+                lat = ac.get("lat")
+                lon = ac.get("lon")
+                dist_str, eta_str = calculate_distance_eta(lat, lon, gs)
+                
+                msg_reg = reg if reg else "Unknown"
+                msg_type = ac_type if ac_type else "Unknown"
+                found_targets.append(f"✈️ *{msg_reg}* ({msg_type})\n📡 *Callsign:* {callsign}\n🗺 *Route:* {route}\n⏱ *ETA:* {eta_str} ({dist_str})")
+                
+    if found_targets:
+        report = "🚨 *UPCOMING TARGETS DETECTED:*\n\n" + "\n\n".join(found_targets)
+    else:
+        report = "✅ *No targets are currently flying towards TLV within a 1,500 NM radius.*"
+    send_telegram_alert(report)
+
+def check_telegram_commands():
+    global tracked_flights
+    last_id = tracked_flights.get("last_telegram_update_id", 0)
+    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/getUpdates?offset={last_id + 1}&timeout=1"
+    try:
+        res = requests.get(url, timeout=5)
+        if res.status_code == 200:
+            data = res.json()
+            for item in data.get("result", []):
+                update_id = item["update_id"]
+                tracked_flights["last_telegram_update_id"] = update_id
+                
+                msg = item.get("message", {})
+                text = msg.get("text", "").strip()
+                chat_id = msg.get("chat", {}).get("id")
+                
+                if text == "/check" and str(chat_id) == str(TELEGRAM_CHAT_ID):
+                    send_telegram_alert("🔍 *Scanning airspace up to 1,500 NM away for target aircraft...*")
+                    run_manual_scan()
+    except Exception as e: pass
 
 def poll_sky():
     global tracked_flights
@@ -205,16 +265,12 @@ def poll_sky():
         dist_str, eta_str = calculate_distance_eta(lat, lon, gs)
         
         if is_target:
-            # Constantly re-check the route if it's currently Unknown!
             if state.get("route", "Unknown Route") == "Unknown Route":
                 state["route"] = get_flight_route(reg)
                 
             route = state["route"]
-            
-            # Strictly check the DESTINATION side of the arrow for TLV/LLBG
             dest_part = route.split("➡️")[-1] if "➡️" in route else route
             route_to_tlv = "TLV" in dest_part or "LLBG" in dest_part
-            
             is_hidden_route = (route == "Unknown Route")
             
             is_heavy_military = is_military and category in ["A3", "A4", "A5"]
@@ -263,16 +319,23 @@ def poll_sky():
             state["emergency_alerted"] = True
 
     for hex_code in list(tracked_flights.keys()):
-        if hex_code not in currently_airborne_targets:
+        if hex_code not in currently_airborne_targets and hex_code != "last_telegram_update_id":
             del tracked_flights[hex_code]
 
 def main():
     global tracked_flights
-    logging.info("Starting GitHub Actions Tracker Run...")
+    logging.info("Starting GitHub Actions real-time burst...")
     tracked_flights = load_state()
-    poll_sky()
+    
+    # Run loop 9 times, pausing 30 seconds between. Total runtime ~4.5 mins.
+    # This turns a slow 5-minute GitHub Action into a near REAL-TIME live scanner!
+    for _ in range(9):
+        poll_sky()
+        check_telegram_commands()
+        time.sleep(30)
+        
     save_state(tracked_flights)
-    logging.info("Run complete. State saved.")
+    logging.info("Burst complete. Exiting cleanly for next GitHub Action run.")
 
 if __name__ == "__main__":
     main()
