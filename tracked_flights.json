@@ -1,3 +1,87 @@
 {
-    "last_telegram_update_id": 487276770
+    "last_telegram_update_id": 487276770,
+    "89669a": {
+        "callsign": "ETD353",
+        "alerted": false,
+        "route": "HYD \u27a1\ufe0f AUH (EY353)",
+        "emergency_alerted": false
+    },
+    "502d9f": {
+        "callsign": "BTI771",
+        "alerted": true,
+        "route": "RIX \u27a1\ufe0f TLV (BT771)",
+        "emergency_alerted": false
+    },
+    "502ce4": {
+        "callsign": "BTI3HK",
+        "alerted": false,
+        "route": "LIS \u27a1\ufe0f VNO (BT990)",
+        "emergency_alerted": false
+    },
+    "ac9923": {
+        "callsign": "UAL994",
+        "alerted": false,
+        "route": "EWR \u27a1\ufe0f BRU (UA994)",
+        "emergency_alerted": false
+    },
+    "aa9321": {
+        "callsign": "UAL918",
+        "alerted": false,
+        "route": "IAD \u27a1\ufe0f LHR (UA918)",
+        "emergency_alerted": false
+    },
+    "aa6bc0": {
+        "callsign": "UAL14",
+        "alerted": false,
+        "route": "EWR \u27a1\ufe0f LHR (UA14)",
+        "emergency_alerted": false
+    },
+    "a1d8fd": {
+        "callsign": "UAL880",
+        "alerted": false,
+        "route": "IAH \u27a1\ufe0f LHR (UA880)",
+        "emergency_alerted": false
+    },
+    "4007f1": {
+        "callsign": "BAW63H",
+        "alerted": false,
+        "route": "MCO \u27a1\ufe0f LGW (BA2036)",
+        "emergency_alerted": false
+    },
+    "405bfd": {
+        "callsign": "BAW265",
+        "alerted": false,
+        "route": "SAN \u27a1\ufe0f LHR (BA264)",
+        "emergency_alerted": false
+    },
+    "a4d838": {
+        "callsign": "DAL16",
+        "alerted": false,
+        "route": "DTW \u27a1\ufe0f LHR (DL16)",
+        "emergency_alerted": false
+    },
+    "a6b47c": {
+        "callsign": "DAL996",
+        "alerted": false,
+        "route": "ATL \u27a1\ufe0f LAX (DL996)",
+        "emergency_alerted": false
+    },
+    "4d20ef": {
+        "callsign": "ICL751",
+        "alerted": false,
+        "route": "Unknown Route",
+        "emergency_alerted": false
+    },
+    "aa86fb": {
+        "callsign": "CKS241",
+        "alerted": false,
+        "route": "MIA \u27a1\ufe0f CVG (K4241)",
+        "emergency_alerted": false
+    },
+    "8960d2": {
+        "callsign": "UAE9645",
+        "alerted": false,
+        "route": "NBO \u27a1\ufe0f LGG (EK9645)",
+        "emergency_alerted": false
+    }
 }
